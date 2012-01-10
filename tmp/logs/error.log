@@ -1,0 +1,186 @@
+2012-01-09 10:45:48 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-09 10:45:48 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-09 10:49:51 Error: [MissingActionException] Action ImagesController::logo-agdeima.png() could not be found.
+#0 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-01-09 10:49:51 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-09 10:49:51 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-09 10:53:58 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-09 10:53:58 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-09 10:54:54 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-09 10:54:54 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-09 10:54:57 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-09 10:54:57 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-09 10:57:04 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-09 10:57:04 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-09 10:59:47 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-09 10:59:47 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-09 10:59:55 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-09 10:59:55 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-09 11:14:51 Error: [MissingActionException] Action ImagesController::prijatelji.png() could not be found.
+#0 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-01-09 11:14:51 Error: [MissingActionException] Action ImagesController::kat.png() could not be found.
+#0 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-01-09 11:14:51 Error: [MissingActionException] Action ImagesController::arhiva.png() could not be found.
+#0 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-01-09 11:14:51 Error: [MissingActionException] Action ImagesController::hot.png() could not be found.
+#0 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-01-09 11:19:15 Error: [MissingActionException] Action ImagesController::hot.png() could not be found.
+#0 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-01-09 11:19:15 Error: [MissingActionException] Action ImagesController::kat.png() could not be found.
+#0 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-01-09 11:19:15 Error: [MissingActionException] Action ImagesController::arhiva.png() could not be found.
+#0 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-01-09 11:19:15 Error: [MissingActionException] Action ImagesController::prijatelji.png() could not be found.
+#0 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(ImagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-01-09 23:14:27 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Post.id' in 'where clause'
+#0 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(436): PDOStatement->execute(Array)
+#1 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute('SELECT `Comment...', Array)
+#2 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(647): DboSource->execute('SELECT `Comment...', Array, Array)
+#3 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(1040): DboSource->fetchAll('SELECT `Comment...', false)
+#4 /var/www/cakephp/lib/Cake/Model/Model.php(2483): DboSource->read(Object(Comment), Array)
+#5 /var/www/agdeima/Controller/PostsController.php(34): Model->find('all', Array)
+#6 [internal function]: PostsController->view('146')
+#7 /var/www/cakephp/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#10 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2012-01-09 23:19:46 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Comment.contentComment.created' in 'field list'
+#0 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(436): PDOStatement->execute(Array)
+#1 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(647): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(1040): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /var/www/cakephp/lib/Cake/Model/Model.php(2483): DboSource->read(Object(Comment), Array)
+#5 /var/www/agdeima/Controller/PostsController.php(34): Model->find('all', Array)
+#6 [internal function]: PostsController->view('146')
+#7 /var/www/cakephp/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#8 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#10 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2012-01-09 23:24:00 Error: [NotFoundException] Invalid post
+#0 [internal function]: PostsController->view('1000')
+#1 /var/www/cakephp/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#2 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-01-10 10:40:02 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-10 10:40:02 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-10 12:32:43 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-10 12:32:43 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-10 13:15:07 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-10 13:15:07 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-10 13:16:32 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-10 13:16:32 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-10 13:20:46 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-10 13:20:46 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-10 13:30:31 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-10 13:30:31 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-10 13:33:20 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-10 13:33:20 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-10 14:16:44 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-10 14:16:44 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-10 14:17:00 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-10 14:17:00 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-10 14:20:40 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-10 14:20:40 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
