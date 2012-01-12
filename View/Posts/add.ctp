@@ -1,3 +1,6 @@
+<pre>
+	<?php print_r($unos);?>
+</pre>
 <?php $this->Html->script(array('ckeditor/ckeditor', 'jquery/jquery-1.6.1.min', 'jquery/fileuploader'), array('inline' => false));?>
 <div class="posts form">
 				

@@ -1,6 +1,7 @@
 <pre>
 	<?php //print_r($comments);?>
 	<?php //print_r($post);?>
+		<?php //print_r($this->Session->read());?>
 </pre>	
 <div class="posts view">
 
@@ -33,28 +34,20 @@
 			
 
 <div class="new-comment-box">
-	
-	<form method=POST action="single.php">
-		
-		<input type=TEXT name="Nadimak" size=18 class="input-box" value=""><span class="label">Nadimak</span><br /><br />
-	
-		<input type=TEXT name="Email" size=25 class="input-box" value=""><span class="label">Email (neće biti objavljen)</span><br /><br />
-		
-		<textarea name="Komentar" rows="10" cols="50" class="comment-input"></textarea><br /><br />
-		
-		<div class="provera-bot">Koliko mačka ima nogu? (upisati slovima) <input type=TEXT name="Provera-mačke" size=6></div>
-		
-		<div id="secret"><input type=TEXT name=secret size=10></div>
-		
-		<input type=submit value="Objavi" name="Submit" class="comment-button"><br /><br /><br />
-		
-		<input name="email-obavestenje" type="checkbox" value="" />
-			<span class="label">Obavesti me mejlom o novim komentarima</span>
-		
-		
-	</form>
-	
+<?php echo $this->Form->create('Post');?>
 			
-	
+			<?php echo $this->Form->input('User.username', array('label' => false, 'div' => false, 'class' => 'input-box'));?>
+			<span class="label">Nadimak</span><br /><br />
+			
+			<?php echo $this->Form->input('User.email', array('label' => false, 'div' => false, 'class' => 'input-box'));?>
+			<span class="label">Email (neće biti objavljen)</span><br /><br />
+			
+			<p class="post-label">Calculate this: <?php echo $captcha; ?></p>			
+			<?php echo $this->Form->input('captcha', array('label' => false, 'div' => false, 'class' => 'input-box')); ?><br /><br />
+			<?php echo $this->Form->checkbox('notify', array('label' => false, 'div' => false, 'class' => 'input-box')); ?>
+			<span class="label">Obavesti me mejlom o novim komentarima</span><br /><br />
+			<?php echo $this->Form->button('Submit', array('type' => 'submit', 'div' => false, 'class' => 'comment-button')); ?>
+			<?php echo $this->Form->end();?>	
+				
 </div>
 </div>
