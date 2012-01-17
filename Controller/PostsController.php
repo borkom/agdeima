@@ -7,7 +7,7 @@ App::uses('CakeEmail', 'Network/Email');
  * @property Post $Post
  */
 class PostsController extends AppController {
-    public $components = array('PermalinkGenerator', 'MathCaptcha', array('timer' => 3));
+    public $components = array('Session', 'PermalinkGenerator', 'MathCaptcha', array('timer' => 3));
 	public $helpers = array('Session');
 	public $uses = array('User', 'Post', 'Comment');
 	
@@ -33,6 +33,10 @@ class PostsController extends AppController {
 		if($this->request->is('post')){
 			if($this->MathCaptcha->validate($this->request->data['Post']['captcha'])){
 				$this->User->create();
+				if($this->Session->check('Login.email')){
+					$this->request->data['User']['email'] = $this->Session->read('Login.email');
+					$this->request->data['User']['username'] = $this->Session->read('Login.username');
+				}				
 				if($this->User->save($this->request->data)){
 					$user_id = $this->User->id;
 				} else {
@@ -49,12 +53,16 @@ class PostsController extends AppController {
 				$this->Comment->set('user_id', $user_id);
 				$this->Comment->set('post_id', $id);
 				if($this->Comment->save()){
+					$this->Session->write('Login.email', $this->request->data['User']['email']);
+					$this->Session->write('Login.username', $this->request->data['User']['username']);
+					$this->Session->write('Login.id', $user_id);										
 					/*$email = new CakeEmail();
 					$email->config('smtp');
-					$email->template('default', 'default');
+					$email->template('notify', 'agdeima');
 					$email->to('admin@agdeima.com');
 					$email->bcc($this->Post->PostUser->find('list', array('fields' => array('User.id', 'User.email'), 'conditions' => array('PostUser.post_id' => $id, 'PostUser.notify' => true), 'recursive' => 0)));
 					$email->subject('Novi komentar');
+					$email->viewVars(array('id' => $id, 'title' => $this->Post->field('title', array('Post.id' => $id))));
 					$email->emailFormat('html');
 					$email->send();*/
 					$postuser = $this->Post->PostUser->find('first', array('conditions' => array('PostUser.post_id' => $id, 'PostUser.user_id' => $user_id)));	
@@ -106,6 +114,10 @@ class PostsController extends AppController {
 		if($this->MathCaptcha->validate($this->request->data['Post']['captcha'])){	
 		if ($this->request->is('post')) {
 			$this->User->create();
+			if($this->Session->check('Login.email')){
+				$this->request->data['User']['email'] = $this->Session->read('Login.email');
+				$this->request->data['User']['username'] = $this->Session->read('Login.username');
+			}
 			if($this->User->save($this->request->data)){
 				$user_id = $this->User->id;
 			} else {
@@ -128,6 +140,9 @@ class PostsController extends AppController {
 			$this->Post->set('user_id', $user_id);
 			$this->Post->set('permalink', $this->PermalinkGenerator->toAscii(($this->request->data['Post']['title'])));
 			if ($this->Post->save($this->request->data)) {
+				$this->Session->write('Login.email', $this->request->data['User']['email']);
+				$this->Session->write('Login.username', $this->request->data['User']['username']);
+				$this->Session->write('Login.id', $user_id);								
 				/*$email = new CakeEmail();
 				$email->config('smtp');
 				$email->template('default', 'default');
@@ -206,4 +221,27 @@ class PostsController extends AppController {
 		$this->Session->setFlash(__('Post was not deleted'));
 		$this->redirect(array('action' => 'index'));
 	}
+	
+/**
+ * unsubscribe method
+ *
+ * @param string $id
+ * @return void
+ */
+	public function unsubscribe($id = null) {
+		if ($this->request->is('post')) {
+			$user_id = $this->User->field('id', array('User.email =' => $this->request->data['User']['email']));	
+			if($this->Post->PostUser->updateAll(array('PostUser.notify' => "\"".false."\""), array('PostUser.user_id =' => $user_id, 'PostUser.post_id =' => $id))){
+			$this->Session->setFlash(__('Uspesna odjava'));
+			$this->redirect(array('action' => 'index'));
+			}
+		}
+		
+		if($this->Session->check('Login.email')){
+			if($this->Post->PostUser->updateAll(array('PostUser.notify' => "\"".false."\""), array('PostUser.user_id =' => $this->Session->read('Login.id'), 'PostUser.post_id =' => $id))){
+			$this->Session->setFlash(__('Uspesna odjava'));
+			$this->redirect(array('action' => 'index'));
+			}
+		}
+	}	
 }

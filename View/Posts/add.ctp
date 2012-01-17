@@ -1,5 +1,5 @@
 <pre>
-	<?php print_r($unos);?>
+	<?php print_r($this->Session->read());?>
 </pre>
 <?php $this->Html->script(array('ckeditor/ckeditor', 'jquery/jquery-1.6.1.min', 'jquery/fileuploader'), array('inline' => false));?>
 <div class="posts form">
@@ -35,12 +35,13 @@
 	
 		
 			<span class="post-label"><br /><br />
-			
+			<?php if(!$this->Session->check('Login.email')):?>
 			<p class="post-label">Nadimak</p>
 			<?php echo $this->Form->input('User.username', array('label' => false, 'div' => false, 'class' => 'post-input-box'));?>
 			
 			<p class="post-label">Email (neće biti objavljen)</p>
 			<?php echo $this->Form->input('User.email', array('label' => false, 'div' => false, 'class' => 'post-input-box'));?>
+			<?php endif;?>
 			<p class="post-label">Primaj obavestenja o komentarima</p>
 			<?php echo $this->Form->input('PostUser.notify', array('label' => false, 'div' => false, 'class' => 'post-input-box'));?>			
 			<p class="post-label">Izračunaj: <?php echo $captcha; ?></p>			

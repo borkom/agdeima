@@ -51,12 +51,12 @@ class EmailConfig {
 
 	public $smtp = array(
 		'transport' => 'Smtp',
-		'from' => array('borko.mihajlovic@gmail.com' => 'My Site'),
+		'from' => array('borko.mihajlovic@gmail.com' => 'A gde ima?'),
 		'host' => 'ssl://smtp.gmail.com',
 		'port' => 465,
 		'timeout' => 30,
 		'username' => 'borko.mihajlovic@gmail.com',
-		'password' => '*******',
+		'password' => '****',
 		'client' => null,
 		'log' => false
 		//'charset' => 'utf-8',

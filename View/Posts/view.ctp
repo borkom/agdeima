@@ -35,12 +35,13 @@
 
 <div class="new-comment-box">
 <?php echo $this->Form->create('Post');?>
-			
+			<?php if(!$this->Session->check('Login.email')):?>			
 			<?php echo $this->Form->input('User.username', array('label' => false, 'div' => false, 'class' => 'input-box'));?>
 			<span class="label">Nadimak</span><br /><br />
 			
 			<?php echo $this->Form->input('User.email', array('label' => false, 'div' => false, 'class' => 'input-box'));?>
 			<span class="label">Email (neće biti objavljen)</span><br /><br />
+			<?php endif;?>			
 			<?php echo $this->Form->input('Comment.content', array('label' => false, 'div' => false, 'class' => 'comment-input'));?><br /><br />			
 			<p class="post-label">Izračunaj: <?php echo $captcha; ?></p>			
 			<?php echo $this->Form->input('captcha', array('label' => false, 'div' => false, 'class' => 'input-box')); ?>
