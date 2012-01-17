@@ -1,9 +1,9 @@
 <pre>
-	<?php //print_r($comments);?>
+	<?php //print_r($usernotify);?>
 	<?php //print_r($post);?>
 		<?php //print_r($this->Session->read());?>
 </pre>	
-<div class="posts view">
+
 
 	<h1><?php echo $this->Html->link($post['Post']['title'], array('controller' => 'posts', 'action' => 'view', $post['Post']['id'])); ?></h1>
 				<p class="post-info"><?php echo h($post['Post']['created']); ?> |
@@ -41,13 +41,13 @@
 			
 			<?php echo $this->Form->input('User.email', array('label' => false, 'div' => false, 'class' => 'input-box'));?>
 			<span class="label">Email (neće biti objavljen)</span><br /><br />
-			
-			<p class="post-label">Calculate this: <?php echo $captcha; ?></p>			
-			<?php echo $this->Form->input('captcha', array('label' => false, 'div' => false, 'class' => 'input-box')); ?><br /><br />
-			<?php echo $this->Form->checkbox('notify', array('label' => false, 'div' => false, 'class' => 'input-box')); ?>
-			<span class="label">Obavesti me mejlom o novim komentarima</span><br /><br />
-			<?php echo $this->Form->button('Submit', array('type' => 'submit', 'div' => false, 'class' => 'comment-button')); ?>
+			<?php echo $this->Form->input('Comment.content', array('label' => false, 'div' => false, 'class' => 'comment-input'));?><br /><br />			
+			<p class="post-label">Izračunaj: <?php echo $captcha; ?></p>			
+			<?php echo $this->Form->input('captcha', array('label' => false, 'div' => false, 'class' => 'input-box')); ?>
+			<?php echo $this->Form->button('Submit', array('type' => 'submit', 'div' => false, 'class' => 'comment-button')); ?><br /><br />
+			<?php echo $this->Form->checkbox('PostUser.notify', array('label' => false, 'div' => false, 'class' => 'input-box')); ?>
+			<span class="label">Obavesti me mejlom o novim komentarima</span><br /><br />			
 			<?php echo $this->Form->end();?>	
 				
 </div>
-</div>
+

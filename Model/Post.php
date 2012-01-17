@@ -110,7 +110,7 @@ class Post extends AppModel {
 		'Comment' => array(
 			'className' => 'Comment',
 			'foreignKey' => 'post_id',
-			'dependent' => false,
+			'dependent' => true,
 			'conditions' => '',
 			'fields' => '',
 			'order' => '',
@@ -123,7 +123,7 @@ class Post extends AppModel {
 		'Image' => array(
 			'className' => 'Image',
 			'foreignKey' => 'post_id',
-			'dependent' => false,
+			'dependent' => true,
 			'conditions' => '',
 			'fields' => '',
 			'order' => '',
@@ -132,6 +132,11 @@ class Post extends AppModel {
 			'exclusive' => '',
 			'finderQuery' => '',
 			'counterQuery' => ''
+		),
+		'PostUser' => array(
+			'className' => 'PostUser',
+			'foreignKey' => 'post_id',
+			'dependent' => true
 		)
 	);
 

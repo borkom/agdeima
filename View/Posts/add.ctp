@@ -41,7 +41,9 @@
 			
 			<p class="post-label">Email (neće biti objavljen)</p>
 			<?php echo $this->Form->input('User.email', array('label' => false, 'div' => false, 'class' => 'post-input-box'));?>
-			<p class="post-label">Calculate this: <?php echo $captcha; ?></p>			
+			<p class="post-label">Primaj obavestenja o komentarima</p>
+			<?php echo $this->Form->input('PostUser.notify', array('label' => false, 'div' => false, 'class' => 'post-input-box'));?>			
+			<p class="post-label">Izračunaj: <?php echo $captcha; ?></p>			
 			<?php echo $this->Form->input('captcha', array('label' => false, 'div' => false, 'class' => 'post-input-box')); ?><br /><br />
 			<?php echo $this->Form->button('Submit', array('type' => 'submit', 'div' => false, 'class' => 'post-button-objavi')); ?>
 			<?php echo $this->Form->end();?>

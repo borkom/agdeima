@@ -1,14 +1,15 @@
 <?php
 App::uses('AppController', 'Controller');
+App::uses('CakeEmail', 'Network/Email');
 /**
  * Posts Controller
  *
  * @property Post $Post
  */
 class PostsController extends AppController {
-    public $components = array('MathCaptcha', array('timer' => 3));
+    public $components = array('PermalinkGenerator', 'MathCaptcha', array('timer' => 3));
 	public $helpers = array('Session');
-	public $uses = array('User', 'Post');
+	public $uses = array('User', 'Post', 'Comment');
 	
 /**
  * index method
@@ -29,16 +30,70 @@ class PostsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
-
+		if($this->request->is('post')){
+			if($this->MathCaptcha->validate($this->request->data['Post']['captcha'])){
+				$this->User->create();
+				if($this->User->save($this->request->data)){
+					$user_id = $this->User->id;
+				} else {
+					$username = "\"".$this->request->data['User']['username']."\"";
+					$this->User->id = $this->User->field('id', array('User.email =' => $this->request->data['User']['email']));
+					if($this->User->updateAll(array('User.username' => $username), array('User.email =' => $this->request->data['User']['email']))){
+						$user_id = $this->User->id;
+					} else {
+					$this->Session->setFlash(__('emailThe post could not be saved. Please, try again.'));
+					}					
+				}
+				$this->Comment->create();
+				$this->Comment->set('content', $this->request->data['Comment']['content']);
+				$this->Comment->set('user_id', $user_id);
+				$this->Comment->set('post_id', $id);
+				if($this->Comment->save()){
+					/*$email = new CakeEmail();
+					$email->config('smtp');
+					$email->template('default', 'default');
+					$email->to('admin@agdeima.com');
+					$email->bcc($this->Post->PostUser->find('list', array('fields' => array('User.id', 'User.email'), 'conditions' => array('PostUser.post_id' => $id, 'PostUser.notify' => true), 'recursive' => 0)));
+					$email->subject('Novi komentar');
+					$email->emailFormat('html');
+					$email->send();*/
+					$postuser = $this->Post->PostUser->find('first', array('conditions' => array('PostUser.post_id' => $id, 'PostUser.user_id' => $user_id)));	
+					if(empty($postuser)){	
+					$this->Post->PostUser->create();
+					$this->Post->PostUser->set('post_id', $id);
+					$this->Post->PostUser->set('user_id', $user_id);
+					$this->Post->PostUser->set('notify', $this->request->data['PostUser']['notify']);
+					$this->Post->PostUser->save();
+					}	
+					$this->Session->setFlash(__('Komentar je objavljen'));
+					$this->redirect(array('action' => 'view', $id));
+					//unset($this->request->data);					
+				} else {
+					$this->Session->setFlash(__('Greska prilikom slanja komentara'));					
+				}											
+			} else {
+				$this->Session->setFlash('Pogresan rezultat za captcha. Pokusajte ponovo.');				
+			}			
+		}
 		//$this->Post->Comment->recursive = 1;	
 		$this->Post->id = $id;
 		if (!$this->Post->exists()) {
 			throw new NotFoundException(__('Invalid post'));
 		}
 		$comments = $this->Post->Comment->find('all', array('fields' => array('User.username', 'Comment.content', 'Comment.created'), 'conditions' => array('Post.id' => $id)));
-		$this->set('post', $this->Post->read(null, $id));
+		$post = $this->Post->read(null, $id);
+		$this->set('post', $post);
 		$this->set('comments', $comments);
 		$this->set('captcha', $this->MathCaptcha->getCaptcha());
+		//$this->set('usernotify', $this->Post->PostUser->find('list', array('fields' => array('User.id', 'User.email'), 'conditions' => array('PostUser.post_id' => $id, 'PostUser.notify' => true), 'recursive' => 0)));
+		// session based view counter
+		if(is_numeric($post['Post']['id'])){
+                if(!$this->Session->check('Viewed.'.$id)){
+                    $this->Session->write('Viewed.'.$id, true);
+                    $view_count = $post['Post']['view_count'] + 1;
+                    $this->Post->saveField('view_count', $view_count);
+                }
+                }
 	}
 
 /**
@@ -47,7 +102,8 @@ class PostsController extends AppController {
  * @return void
  */
 	public function add() {
-			
+		if ($this->request->is('post')) {
+		if($this->MathCaptcha->validate($this->request->data['Post']['captcha'])){	
 		if ($this->request->is('post')) {
 			$this->User->create();
 			if($this->User->save($this->request->data)){
@@ -70,18 +126,36 @@ class PostsController extends AppController {
 			$this->Post->recursive = 1;
 			$this->Post->create();
 			$this->Post->set('user_id', $user_id);
+			$this->Post->set('permalink', $this->PermalinkGenerator->toAscii(($this->request->data['Post']['title'])));
 			if ($this->Post->save($this->request->data)) {
+				/*$email = new CakeEmail();
+				$email->config('smtp');
+				$email->template('default', 'default');
+				$email->to('admin@agdeima.com');
+				$email->subject('Novi post');
+				$email->emailFormat('html');
+				$email->send();*/					
+				$this->Post->PostUser->create();
+				$this->Post->PostUser->set('post_id', $this->Post->id);
+				$this->Post->PostUser->set('user_id', $user_id);
+				$this->Post->PostUser->set('notify', $this->request->data['PostUser']['notify']);
+				$this->Post->PostUser->save();	
 				$this->Session->setFlash(__('The post has been saved'));
 				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The post could not be saved. Please, try again.'));
 			}
 		}
+		} else {
+			$this->Session->setFlash('Pogresan rezultat za captcha. Pokusajte ponovo.');
+		}
+		}
 		
 		//$users = $this->Post->User->find('list');
 		$categories = $this->Post->Category->find('list');
 		$this->set(compact('categories'));
-		$this->set('captcha', $this->MathCaptcha->getCaptcha());
+    	$this->set('captcha', $this->MathCaptcha->getCaptcha());
+    	$this->set('captcha_result', $this->MathCaptcha->getResult());
 		$this->set('unos', $this->request->data);
 	}
 

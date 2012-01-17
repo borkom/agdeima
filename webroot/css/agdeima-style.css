@@ -45,14 +45,14 @@ margin-right:28px;
 }
 
 .search {
-color:grey;
+color:gray;
 }
 
 .search-input {
 border-radius:8px;
 border:1px solid #d5d5d5;
 background:transparent;
-height:18px;
+height:30px;
 padding:2px;
 }
 
@@ -74,7 +74,7 @@ float: left;
 .menu ul li a {
 display: block;
 padding-right:20px;
-color:grey;
+color:gray;
 }
 
 .menu a:hover {
@@ -117,12 +117,12 @@ margin-bottom:20px;
 
 .post-info {
 font-size:10px;
-color:grey;
+color:gray;
 margin-bottom:10px;
 }
 
 .post-info a {
-color:grey;
+color:gray;
 }
 
 .post  {
@@ -176,7 +176,7 @@ font-size: 13px;
 }
 
 .prev-next a {
-color:grey;
+color:gray;
 text-decoration:none;
 }
 
@@ -233,7 +233,7 @@ float:right;
 min-width:75px;
 min-height:45px;
 font-size:12px;
-color:grey;
+color:gray;
 padding-left:5px;
 }
 
@@ -254,12 +254,12 @@ padding:15px 15px 80px 15px;
 .input-box {
 border-radius:6px;
 border:0px;
-height:15px;
+height:30px;
 padding:5px;
 }
 
 .label {
-color:grey;
+color:gray;
 font-size:12px;
 padding-left:5px;
 }
@@ -267,7 +267,7 @@ padding-left:5px;
 .provera-bot {
 float:left;
 font-size:12px;
-color:grey;
+color:gray;
 }
 
 #secret {
@@ -298,13 +298,13 @@ background-position: 0 0;
 
 .post-label {
 font-size:13px;
-color: grey;
+color: gray;
 padding:0 0 10px 5px;
 }
 
 .instructions {
 font-size: 10px;
-color:grey;
+color:gray;
 padding-TOP:10px;
 padding-bottom:20px;
 width:620px;
@@ -340,7 +340,7 @@ float: left;
 display: block;
 padding: 6px 10px;
 font-size: 16px;
-color:grey;
+color:gray;
 text-decoration:none;
 }
 
@@ -377,7 +377,7 @@ font-size:12px;
 
 #sidebar-box ul li a {
 display: block;
-color:grey;
+color:gray;
 text-decoration:none;
 }
 
@@ -402,5 +402,5 @@ margin-left:auto;
 margin-right:auto;
 width:960px;
 height:200px;
-color:grey;
+color:gray;
 }

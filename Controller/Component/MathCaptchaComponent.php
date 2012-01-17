@@ -41,11 +41,11 @@ class MathCaptchaComponent extends Component {
   * @var array
   */
   private $choices = array(
-    "What is the sum of .:addition-problem:.?", 
-    "What does .:word-problem:. result in?", 
-    "What is .:problem:.?", 
-    "What's the result of .:word-problem:.?", 
-    "What do you get when you .:word2-problem:.?" 
+    "Kolika je suma .:addition-problem:.?", 
+    "Čemu .:word-problem:. rezultira?", 
+    "Koliko je .:problem:.?", 
+    "Koji je rezultat od .:word-problem:.?", 
+    "Šta dobiješ kada .:word2-problem:.?" 
   ); 
 
   /**
@@ -77,37 +77,37 @@ class MathCaptchaComponent extends Component {
 
     ".:number:." => array(
       "0" => 0,
-      "zero" => 0,
+      "nula" => 0,
       "1" => 1,
-      "one" => 1,
+      "jedan" => 1,
       "2" => 2,
-      "two" => 2,
+      "dva" => 2,
       "3" => 3,
-      "three" => 3,
+      "tri" => 3,
       "4" => 4,
-      "four" => 4,
+      "četiri" => 4,
       "5" => 5,
-      "five" => 5),
+      "pet" => 5),
 
     ".:operator:." => array(
       "+" => "+",
       "plus" => "+",
-      "added to" => "+",
-      "times" => "*",
-      "multiplied by" => "*"),
+      "dodato na" => "+",
+      "puta" => "*",
+      "pomnoženo sa" => "*"),
     
     ".:add:." => array(
-      "and" => "+",
+      "i" => "+",
       "plus" => "+",
       "+" => "+"),
 
     ".:operatorword:." => array( 
-      "add .:number:. to" => "+",
-      "multiply .:number:. by" => "*"),
+      "dodaš .:number:. na" => "+",
+      "pomnožiš .:number:. sa" => "*"),
 
     ".:operatorword-ing:." => array(
-      "adding .:number:. to" => "+",
-      "multiplying .:number:. by" => "*")
+      "dodaj .:number:. na" => "+",
+      "množenja .:number:. sa" => "*")
   );
 
   /**
@@ -121,22 +121,22 @@ class MathCaptchaComponent extends Component {
   * @var array
   */
   private $alternatives = array(
-    0  => array("zero", "O", "null", "nil", "nada", "zip", "zilch", "nothing", "rien", "naught"),
-    1  => "one",
-    2  => "two",
-    3  => "three",
-    4  => "four",
-    5  => "five",
-    6  => "six",
-    7  => "seven",
-    8  => "eight",
-    9  => "nine",
-    10 => "ten",
-    12 => "twelve",
-    15 => array("fifteen", "fivteen"),
-    16 => "sixteen",
-    20 => "twenty",
-    25 => array("twentyfive", "twenty-five")
+    0  => array("zero", "O", "null", "nil", "nada", "zip", "zilch", "nothing", "rien", "naught", "nula"),
+    1  => "jedan",
+    2  => "dva",
+    3  => "tri",
+    4  => array("cetiri", "četiri", "četr", "cetr", "cetri","četri"),
+    5  => "pet",
+    6  => array("sest", "šest"),
+    7  => "sedam",
+    8  => "osam",
+    9  => "devet",
+    10 => "deset",
+    12 => array("dvanaest", "dvanajst", "dvanajest"),
+    15 => array("petnaest", "petnajest", "petnajst"),
+    16 => array("sesnaest", "šesnajest", "sesnajst", "šesnajst"),
+    20 => array("dvadeset", "dvaest", "dvajest"),
+    25 => array("dvadesetpet", "dvaespet", "dvajespet")
   );
 
   /**
