@@ -1,23 +1,50 @@
+<?php $this->Html->script('http://static.ak.fbcdn.net/connect.php/js/FB.Share', array('inline' => false));?>
+<?php $this->Html->scriptBlock('!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");', array('inline' => false));?>
 <pre>
-	<?php //print_r($usernotify);?>
-	<?php //print_r($post);?>
+	<?php //print_r($neighbors);?>
+	<?php //print_r($params);?>
 		<?php //print_r($this->Session->read());?>
 </pre>	
 
 
-	<h1><?php echo $this->Html->link($post['Post']['title'], array('controller' => 'posts', 'action' => 'view', $post['Post']['id'])); ?></h1>
+	<h1><?php echo $this->Html->link($post['Post']['title'], array('controller' => 'posts', 'action' => 'view', 'year' => $this->Time->format('Y', $post['Post']['created']), 'month' => $this->Time->format('m', $post['Post']['created']), 'permalink' => $post['Post']['permalink'], 'id' => $post['Post']['id'])); ?></h1>
 				<p class="post-info"><?php echo h($post['Post']['created']); ?> |
 					 autor: <?php echo $this->Html->link($post['User']['username'], array('controller' => 'users', 'action' => 'view', $post['User']['id'])); ?> |
 					 kategorija: <?php echo $this->Html->link($post['Category']['name'], array('controller' => 'categories', 'action' => 'view', $post['Category']['id'])); ?>
 				</p>
 					
-					<div class="post"><p><?php echo $post['Post']['content']; ?></p></div>
+					<div class="post"><?php if(isset($post['Image'][0])): ?>
+						<a href="<?php $bodytag = str_replace("/s144/", "/s{$post['Image'][0]['width']}/", $post['Image'][0]['thumbnail']); echo $bodytag; ?>" target="_blank">
+							<img src="<?php echo $post['Image'][0]['location']; ?>" /></a><?php endif;?>
+						<p><?php echo $post['Post']['content']; ?></p></div>
 			
 			<div class="prev-next">
-				<span style="float:left"><a href="#">&larr; Predhodni post</a></span>
-				<span style="float:right"><a href="#">Sledeći post &rarr;</a></span>
+				<?php if(isset($neighbors['prev']['Post']['id'])):?>
+					<span style="float:left">
+						<?php echo $this->Html->link('< Predhodni post', array('controller' => 'posts', 'action' => 'view', 'year' => $this->Time->format('Y', $neighbors['prev']['Post']['created']), 'month' => $this->Time->format('m', $neighbors['prev']['Post']['created']), 'permalink' => $neighbors['prev']['Post']['permalink'], 'id' => $neighbors['prev']['Post']['id'])); ?>
+						</span>
+						<?php endif; ?>
+				<?php if(isset($neighbors['next']['Post']['id'])):?>
+					<span style="float:right">
+						<?php echo $this->Html->link('Sledeći post >', array('controller' => 'posts', 'action' => 'view', 'year' => $this->Time->format('Y', $neighbors['next']['Post']['created']), 'month' => $this->Time->format('m', $neighbors['next']['Post']['created']), 'permalink' => $neighbors['next']['Post']['permalink'], 'id' => $neighbors['next']['Post']['id'])); ?>
+						</span>
+						<?php endif; ?>				
 			</div>
+			<div>
+				
+				<!-- Social icons-->
+				
+				<iframe src="http://www.facebook.com/plugins/like.php?href=YOUR_URL" scrolling="no" frameborder="0"
+				style="border:none; width:350px; height:30px;">
+				</iframe>
+				
+				<span style="margin:1px; position:absolute;"><a name="fb_share"></a></span>
+				
+				<span style="position:absolute; margin-left:80px;">
+					<a href="https://twitter.com/share" class="twitter-share-button" data-via="twitterapi" data-lang="en">Tweet</a>
+				</span>
 			
+			</div>			
 			<div class="komentara"><p>Ostavite svoj komentar:</p></div>
 <?php foreach ($comments as $comment):?>		
 						<div class='komentar-box'>

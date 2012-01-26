@@ -1,15 +1,24 @@
 <?php
 App::uses('AppController', 'Controller');
 App::uses('CakeEmail', 'Network/Email');
+//set_include_path('/var/www/ZendGdata/library/');
+//App::import('Vendor', 'upload');
 /**
  * Posts Controller
  *
  * @property Post $Post
  */
 class PostsController extends AppController {
-    public $components = array('Session', 'PermalinkGenerator', 'MathCaptcha', array('timer' => 3));
-	public $helpers = array('Session');
+    public $components = array('RequestHandler' ,'Picasa', 'Session', 'PermalinkGenerator', 'MathCaptcha', array('timer' => 3));
+	public $helpers = array('Session', 'Time', 'Text');
 	public $uses = array('User', 'Post', 'Comment');
+	
+	function beforeRender()
+	{
+		$this->Post->recursive = 0;
+		$mostViewed = $this->Post->find('all', array('conditions' => array('Post.published =' => true), 'fields' => array('Post.id', 'Post.title', 'Post.permalink', 'Post.created'), 'limit' => 4, 'order' => 'Post.view_count DESC'));
+		$this->set('mostViewed', $mostViewed);
+	}
 	
 /**
  * index method
@@ -17,8 +26,13 @@ class PostsController extends AppController {
  * @return void
  */
 	public function index() {
+    	if ($this->RequestHandler->isRss() ) {
+        	$posts = $this->Post->find('all', array('conditions' => array('Post.published =' => true), 'limit' => 20, 'order' => 'Post.created DESC'));
+        return $this->set(compact('posts'));
+    	}
+					
 		$this->Post->recursive = 1;
-		$this->paginate = array('limit' => 5, 'order' => array('Post.created' => 'desc'));		
+		$this->paginate = array('limit' => 5, 'conditions' => array('Post.published =' => true), 'order' => array('Post.created' => 'desc'));		
 		$data = $this->paginate('Post');
 		$this->set('posts', $data);
 	}
@@ -29,7 +43,7 @@ class PostsController extends AppController {
  * @param string $id
  * @return void
  */
-	public function view($id = null) {
+	public function view($year = null, $month = null, $permalink = null, $id = null) {
 		if($this->request->is('post')){
 			if($this->MathCaptcha->validate($this->request->data['Post']['captcha'])){
 				$this->User->create();
@@ -93,6 +107,8 @@ class PostsController extends AppController {
 		$this->set('post', $post);
 		$this->set('comments', $comments);
 		$this->set('captcha', $this->MathCaptcha->getCaptcha());
+		$this->set('params', $this->request->params);
+		$this->set('neighbors', $this->Post->find('neighbors', array('field' => 'id', 'value' => $id)));
 		//$this->set('usernotify', $this->Post->PostUser->find('list', array('fields' => array('User.id', 'User.email'), 'conditions' => array('PostUser.post_id' => $id, 'PostUser.notify' => true), 'recursive' => 0)));
 		// session based view counter
 		if(is_numeric($post['Post']['id'])){
@@ -149,7 +165,18 @@ class PostsController extends AppController {
 				$email->to('admin@agdeima.com');
 				$email->subject('Novi post');
 				$email->emailFormat('html');
-				$email->send();*/					
+				$email->send();*/
+				$file = $this->request->data['Upload']['file'];					
+				if($file['error'] == 0){
+					$this->Post->Image->create();
+					$url = $this->Picasa->getImageUrl($file['name'], $file['tmp_name'], $file['type']);
+					$this->Post->Image->set('post_id', $this->Post->id);
+					$this->Post->Image->set('location', $url['location']);
+					$this->Post->Image->set('thumbnail', $url['thumbnail']);
+					$this->Post->Image->set('width', $url['width']);
+					$this->Post->Image->set('height', $url['height']);										
+					$this->Post->Image->save();															
+				}
 				$this->Post->PostUser->create();
 				$this->Post->PostUser->set('post_id', $this->Post->id);
 				$this->Post->PostUser->set('user_id', $user_id);

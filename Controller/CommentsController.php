@@ -7,7 +7,84 @@ App::uses('AppController', 'Controller');
  */
 class CommentsController extends AppController {
 
+/**
+ * voteup method
+ *
+ * @return void
+ */
+	public function voteup($id = null) {
+		if(isset($id)){
+			$this->Comment->id = $id;
+			if(!$this->Comment->exists()){
+				$this->Session->setFlash('Nepostojeci komentar.');
+				$this->redirect(array('controller' => 'posts', 'action' => 'index'));
+			} else {
+				$comment = $this->Comment->read('up', $id);
+				if($this->Comment->Vote->find('first', array('conditions' => array('Vote.comment_id' => $id, 'Vote.ip =' => $_SERVER['REMOTE_ADDR'])))){
+					//vec ste glasali
+					$this->Session->setFlash('Vec ste glasali.');
+					$this->redirect(array('controller' => 'posts', 'action' => 'index'));
+				} else {
+					//povecati glas
+                    $vote_count = $comment['Comment']['up'] + 1;
+                    $this->Comment->set('up', $vote_count);						
+                    if($this->Comment->save()){
+						$this->Comment->Vote->create();
+						$this->Comment->Vote->set('comment_id', $this->Comment->id);
+						$this->Comment->Vote->set('ip', $_SERVER['REMOTE_ADDR']);
+						$this->Comment->Vote->save();
+						$this->Session->setFlash('Hvala Vam za glasanje.');
+						$this->redirect(array('controller' => 'posts', 'action' => 'index'));						                    	
+                    }					
+				}				
+			}
+				
 
+		} else {
+			$this->Session->setFlash('Nije setovan id komentara.');
+			$this->redirect(array('controller' => 'posts', 'action' => 'index'));
+		}	
+	}
+
+/**
+ * votedown method
+ *
+ * @return void
+ */
+	public function votedown($id = null) {
+		if(isset($id)){
+			$this->Comment->id = $id;
+			if(!$this->Comment->exists()){
+				$this->Session->setFlash('Nepostojeci komentar.');
+				$this->redirect(array('controller' => 'posts', 'action' => 'index'));
+			} else {
+				$comment = $this->Comment->read('down', $id);
+				if($this->Comment->Vote->find('first', array('conditions' => array('Vote.comment_id' => $id, 'Vote.ip =' => $_SERVER['REMOTE_ADDR'])))){
+					//vec ste glasali
+					$this->Session->setFlash('Vec ste glasali.');
+					$this->redirect(array('controller' => 'posts', 'action' => 'index'));
+				} else {
+					//povecati glas
+                    $vote_count = $comment['Comment']['down'] + 1;
+                    $this->Comment->set('down', $vote_count);						
+                    if($this->Comment->save()){
+						$this->Comment->Vote->create();
+						$this->Comment->Vote->set('comment_id', $this->Comment->id);
+						$this->Comment->Vote->set('ip', $_SERVER['REMOTE_ADDR']);
+						$this->Comment->Vote->save();
+						$this->Session->setFlash('Hvala Vam za glasanje.');
+						$this->redirect(array('controller' => 'posts', 'action' => 'index'));						                    	
+                    }					
+				}				
+			}
+				
+
+		} else {
+			$this->Session->setFlash('Nije setovan id komentara.');
+			$this->redirect(array('controller' => 'posts', 'action' => 'index'));
+		}	
+	}
+		
 /**
  * index method
  *

@@ -16,6 +16,25 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	vertical-align: baseline;
 }
 
+@media screen and (max-width: 1170px) {
+ 
+ 
+  #baneri-01 {
+    display: none
+  }
+  
+}
+
+@media screen and (max-width: 1380px) {
+ 
+ 
+  #baneri-02 {
+    display: none
+  }
+  
+}
+
+
 body {
 background-color: #ffffff;
 font-family: Arial, Verdana;
@@ -25,10 +44,11 @@ background-repeat: repeat;
 }
 
 #container {
-width: 960px;
+max-width: 1380px;
 margin-left:auto;
 margin-right:auto;
 min-height:1000px;
+padding-left:20px;
 }
 
 #header {
@@ -38,21 +58,19 @@ height:230px;
 margin-bottom:15px;
 }
 
-.search {
+#search {
 float:right;
 margin-top:-7px;
 margin-right:28px;
+color:black;
 }
 
-.search {
-color:gray;
-}
 
 .search-input {
 border-radius:8px;
 border:1px solid #d5d5d5;
 background:transparent;
-height:30px;
+height:18px;
 padding:2px;
 }
 
@@ -74,11 +92,12 @@ float: left;
 .menu ul li a {
 display: block;
 padding-right:20px;
-color:gray;
+color:black;
 }
 
 .menu a:hover {
 color: black;
+text-decoration:none;
 }
 
 
@@ -106,6 +125,7 @@ text-decoration:none;
 
 #content h1 a:hover {
 color:black;
+background-color:#F9FDA1;
 }
 
 .post-input-box {
@@ -163,11 +183,15 @@ padding:5px;
 
 .post code {
 font-size:13px;
-background:#ffd2b9;
-word-wrap: break-word;
 padding:5px;
 display:block;
 margin:10px;
+}
+
+pre {
+overflow: auto;
+background:#ffd2b9;	
+
 }
 
 .prev-next {
@@ -254,7 +278,7 @@ padding:15px 15px 80px 15px;
 .input-box {
 border-radius:6px;
 border:0px;
-height:30px;
+height:15px;
 padding:5px;
 }
 
@@ -389,6 +413,23 @@ text-decoration:underline;
 padding:10px 0px 0px 0px;
 }
 
+#baneri-01, #baneri-02 {
+width:200px;
+min-height:600px;
+float:left;
+margin-left:15px;
+}
+
+.baner-box {
+width:200px;
+height:200px;
+margin-bottom:15px;
+}
+
+.search-selected {
+background-color:yellow;
+}
+
 #footer {
 height:200px;
 background-image:url('../img/footer-bg.png');
@@ -400,7 +441,17 @@ margin-top:20px;
 #footer-container {
 margin-left:auto;
 margin-right:auto;
-width:960px;
+width:930px;
 height:200px;
+color:gray;
+}
+
+.footer-text {
+font-size:11px;
+position:absolute;
+padding-left:10px;
+}
+
+.footer-text a {
 color:gray;
 }

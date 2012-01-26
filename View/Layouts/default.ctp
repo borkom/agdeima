@@ -25,7 +25,7 @@
 		<?php echo $title_for_layout; ?>
 	</title>
 	<?php
-		echo $this->Html->meta('icon');
+		echo $this->Html->meta('favicon.ico', 'favicon.ico', array('type' => 'icon'));
 
 		echo $this->Html->css('agdeima-style');
 
@@ -48,7 +48,8 @@
 	
 		</div>
 		<div id="sidebar"> <?php echo $this->element('sidebar');?> </div>
-	
+		<div id="baneri-01"> <?php echo $this->element('baneri01');?> </div>
+		<div id="baneri-02"> <?php echo $this->element('baneri02');?> </div>	
 		<div style="clear:both"></div>
 		<div id="footer">
 			<?php echo $this->element('footer');?>

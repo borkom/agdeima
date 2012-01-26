@@ -25,7 +25,24 @@
  * its action called 'display', and we pass a param to select the view file
  * to use (in this case, /app/View/Pages/home.ctp)...
  */
+	Router::parseExtensions('rss', 'xml');
+    //Router::parseExtensions('xml');
+    Router::connect('/feed', array('controller' => 'posts','action' => 'index', 'ext' => 'rss'));
+    Router::connect('/sitemap', array('controller' => 'posts','action' => 'sitemap', 'ext' => 'xml'));	
 	Router::connect('/', array('controller' => 'posts', 'action' => 'index'));
+	Router::connect(
+    '/:year/:month/:permalink-:id',
+    array('controller' => 'posts', 'action' => 'view'),
+    array(
+        'pass' => array('year', 'month', 'permalink', 'id'),    
+        'year' => '[12][0-9]{3}',
+        'month' => '0[1-9]|1[012]',
+        'id' => '[0-9]+'
+    )
+);
+
+	Router::connect('/novi-post', array('controller' => 'posts', 'action' => 'add'));
+	
 /**
  * ...and connect the rest of 'Pages' controller's urls.
  */

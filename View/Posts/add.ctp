@@ -4,7 +4,7 @@
 <?php $this->Html->script(array('ckeditor/ckeditor', 'jquery/jquery-1.6.1.min', 'jquery/fileuploader'), array('inline' => false));?>
 <div class="posts form">
 				
-			<?php echo $this->Form->create('Post');?>
+			<?php echo $this->Form->create('Post', array('type' => 'file'));?>
 			
 			<p class="post-label">Naslov</p>
 			<?php echo $this->Form->input('title', array('label' => false, 'div' => false, 'class' => 'post-input-box'));?>
@@ -46,6 +46,7 @@
 			<?php echo $this->Form->input('PostUser.notify', array('label' => false, 'div' => false, 'class' => 'post-input-box'));?>			
 			<p class="post-label">Izračunaj: <?php echo $captcha; ?></p>			
 			<?php echo $this->Form->input('captcha', array('label' => false, 'div' => false, 'class' => 'post-input-box')); ?><br /><br />
+			<?php echo $this->Form->file('Upload.file', array('label' => false, 'div' => false)); ?>
 			<?php echo $this->Form->button('Submit', array('type' => 'submit', 'div' => false, 'class' => 'post-button-objavi')); ?>
 			<?php echo $this->Form->end();?>
 			
