@@ -1,5 +1,6 @@
 <?php $this->Html->script('http://static.ak.fbcdn.net/connect.php/js/FB.Share', array('inline' => false));?>
 <?php $this->Html->scriptBlock('!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");', array('inline' => false));?>
+<?php $this->set('title_for_layout', ' - '.$post['Post']['title']); ?>
 <pre>
 	<?php //print_r($neighbors);?>
 	<?php //print_r($params);?>

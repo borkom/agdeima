@@ -21,7 +21,7 @@
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php echo __('CakePHP: the rapid development php framework:'); ?>
+		<?php echo __('A gde ima?'); ?>
 		<?php echo $title_for_layout; ?>
 	</title>
 	<?php
@@ -42,7 +42,12 @@
 		</div>
 		<div id="content">
 
-			<?php echo $this->Session->flash(); ?>
+			<?php 
+				$error = $this->Session->flash();
+				if($error){
+					echo "<div id='error' class='error-message'>".$error."</div>";
+				} 
+			?>
 
 			<?php echo $content_for_layout; ?>
 	

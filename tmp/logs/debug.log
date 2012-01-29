@@ -410,3 +410,1049 @@ ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
 ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
 [main] - [internal], line ??
 
+2012-01-29 20:26:39 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 20:30:29 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 20:34:09 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 20:38:09 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 20:38:23 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 20:38:53 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 20:39:40 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 20:40:26 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 20:41:31 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 20:41:31 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 20:56:35 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 20:56:55 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 20:59:25 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 21:03:41 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 21:29:26 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 21:29:37 Notice: Notice (8): Trying to get property of non-object in [/var/www/cakephp/lib/Cake/Controller/Controller.php, line 846]
+Trace:
+Controller::validateErrors() - CORE/Cake/Controller/Controller.php, line 846
+UsersController::validate_form() - APP/Controller/UsersController.php, line 111
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 473
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 104
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
+[main] - APP/webroot/index.php, line 98
+
+2012-01-29 21:29:41 Notice: Notice (8): Trying to get property of non-object in [/var/www/cakephp/lib/Cake/Controller/Controller.php, line 846]
+Trace:
+Controller::validateErrors() - CORE/Cake/Controller/Controller.php, line 846
+UsersController::validate_form() - APP/Controller/UsersController.php, line 111
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 473
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 104
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
+[main] - APP/webroot/index.php, line 98
+
+2012-01-29 21:29:48 Notice: Notice (8): Trying to get property of non-object in [/var/www/cakephp/lib/Cake/Controller/Controller.php, line 846]
+Trace:
+Controller::validateErrors() - CORE/Cake/Controller/Controller.php, line 846
+UsersController::validate_form() - APP/Controller/UsersController.php, line 111
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 473
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 104
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
+[main] - APP/webroot/index.php, line 98
+
+2012-01-29 21:29:49 Notice: Notice (8): Trying to get property of non-object in [/var/www/cakephp/lib/Cake/Controller/Controller.php, line 846]
+Trace:
+Controller::validateErrors() - CORE/Cake/Controller/Controller.php, line 846
+UsersController::validate_form() - APP/Controller/UsersController.php, line 111
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 473
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 104
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
+[main] - APP/webroot/index.php, line 98
+
+2012-01-29 21:29:57 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 21:40:22 Notice: Notice (8): Trying to get property of non-object in [/var/www/cakephp/lib/Cake/Controller/Controller.php, line 846]
+Trace:
+Controller::validateErrors() - CORE/Cake/Controller/Controller.php, line 846
+UsersController::validate_form() - APP/Controller/UsersController.php, line 113
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 473
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 104
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
+[main] - APP/webroot/index.php, line 98
+
+2012-01-29 21:40:24 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 21:40:29 Notice: Notice (8): Trying to get property of non-object in [/var/www/cakephp/lib/Cake/Controller/Controller.php, line 846]
+Trace:
+Controller::validateErrors() - CORE/Cake/Controller/Controller.php, line 846
+UsersController::validate_form() - APP/Controller/UsersController.php, line 113
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 473
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 104
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
+[main] - APP/webroot/index.php, line 98
+
+2012-01-29 21:40:31 Notice: Notice (8): Trying to get property of non-object in [/var/www/cakephp/lib/Cake/Controller/Controller.php, line 846]
+Trace:
+Controller::validateErrors() - CORE/Cake/Controller/Controller.php, line 846
+UsersController::validate_form() - APP/Controller/UsersController.php, line 113
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 473
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 104
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
+[main] - APP/webroot/index.php, line 98
+
+2012-01-29 21:40:32 Notice: Notice (8): Trying to get property of non-object in [/var/www/cakephp/lib/Cake/Controller/Controller.php, line 846]
+Trace:
+Controller::validateErrors() - CORE/Cake/Controller/Controller.php, line 846
+UsersController::validate_form() - APP/Controller/UsersController.php, line 113
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 473
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 104
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
+[main] - APP/webroot/index.php, line 98
+
+2012-01-29 21:40:32 Notice: Notice (8): Trying to get property of non-object in [/var/www/cakephp/lib/Cake/Controller/Controller.php, line 846]
+Trace:
+Controller::validateErrors() - CORE/Cake/Controller/Controller.php, line 846
+UsersController::validate_form() - APP/Controller/UsersController.php, line 113
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 473
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 104
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
+[main] - APP/webroot/index.php, line 98
+
+2012-01-29 21:40:34 Notice: Notice (8): Trying to get property of non-object in [/var/www/cakephp/lib/Cake/Controller/Controller.php, line 846]
+Trace:
+Controller::validateErrors() - CORE/Cake/Controller/Controller.php, line 846
+UsersController::validate_form() - APP/Controller/UsersController.php, line 113
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 473
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 104
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
+[main] - APP/webroot/index.php, line 98
+
+2012-01-29 21:40:38 Notice: Notice (8): Trying to get property of non-object in [/var/www/cakephp/lib/Cake/Controller/Controller.php, line 846]
+Trace:
+Controller::validateErrors() - CORE/Cake/Controller/Controller.php, line 846
+UsersController::validate_form() - APP/Controller/UsersController.php, line 113
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 473
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 104
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
+[main] - APP/webroot/index.php, line 98
+
+2012-01-29 21:40:40 Notice: Notice (8): Trying to get property of non-object in [/var/www/cakephp/lib/Cake/Controller/Controller.php, line 846]
+Trace:
+Controller::validateErrors() - CORE/Cake/Controller/Controller.php, line 846
+UsersController::validate_form() - APP/Controller/UsersController.php, line 113
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 473
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 104
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
+[main] - APP/webroot/index.php, line 98
+
+2012-01-29 21:42:14 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 21:42:28 Notice: Notice (8): Undefined index: username in [/var/www/agdeima/Controller/UsersController.php, line 114]
+Trace:
+UsersController::validate_form() - APP/Controller/UsersController.php, line 114
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 473
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 104
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
+[main] - APP/webroot/index.php, line 98
+
+2012-01-29 21:42:43 Notice: Notice (8): Undefined index: username in [/var/www/agdeima/Controller/UsersController.php, line 114]
+Trace:
+UsersController::validate_form() - APP/Controller/UsersController.php, line 114
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 473
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 104
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
+[main] - APP/webroot/index.php, line 98
+
+2012-01-29 21:42:54 Notice: Notice (8): Undefined index: email in [/var/www/agdeima/Controller/UsersController.php, line 114]
+Trace:
+UsersController::validate_form() - APP/Controller/UsersController.php, line 114
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 473
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 104
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
+[main] - APP/webroot/index.php, line 98
+
+2012-01-29 21:43:01 Notice: Notice (8): Undefined index: username in [/var/www/agdeima/Controller/UsersController.php, line 114]
+Trace:
+UsersController::validate_form() - APP/Controller/UsersController.php, line 114
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 473
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 104
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
+[main] - APP/webroot/index.php, line 98
+
+2012-01-29 21:44:38 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 21:47:49 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 21:48:31 Notice: Notice (8): Undefined index: username in [/var/www/agdeima/Controller/UsersController.php, line 114]
+Trace:
+UsersController::validate_form() - APP/Controller/UsersController.php, line 114
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 473
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 104
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
+[main] - APP/webroot/index.php, line 98
+
+2012-01-29 21:49:04 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error500() - CORE/Cake/Error/ExceptionRenderer.php, line 235
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 21:49:06 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 21:51:58 Notice: Notice (8): Undefined index: email in [/var/www/agdeima/Controller/UsersController.php, line 114]
+Trace:
+UsersController::validate_form() - APP/Controller/UsersController.php, line 114
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 473
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 104
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
+[main] - APP/webroot/index.php, line 98
+
+2012-01-29 21:52:00 Notice: Notice (8): Undefined index: username in [/var/www/agdeima/Controller/UsersController.php, line 114]
+Trace:
+UsersController::validate_form() - APP/Controller/UsersController.php, line 114
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 473
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 104
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
+[main] - APP/webroot/index.php, line 98
+
+2012-01-29 21:52:02 Notice: Notice (8): Undefined index: email in [/var/www/agdeima/Controller/UsersController.php, line 114]
+Trace:
+UsersController::validate_form() - APP/Controller/UsersController.php, line 114
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 473
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 104
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
+[main] - APP/webroot/index.php, line 98
+
+2012-01-29 21:52:04 Notice: Notice (8): Undefined index: username in [/var/www/agdeima/Controller/UsersController.php, line 114]
+Trace:
+UsersController::validate_form() - APP/Controller/UsersController.php, line 114
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 473
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 104
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
+[main] - APP/webroot/index.php, line 98
+
+2012-01-29 21:52:06 Notice: Notice (8): Undefined index: email in [/var/www/agdeima/Controller/UsersController.php, line 114]
+Trace:
+UsersController::validate_form() - APP/Controller/UsersController.php, line 114
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 473
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 104
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
+[main] - APP/webroot/index.php, line 98
+
+2012-01-29 21:52:11 Notice: Notice (8): Undefined index: username in [/var/www/agdeima/Controller/UsersController.php, line 114]
+Trace:
+UsersController::validate_form() - APP/Controller/UsersController.php, line 114
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 473
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 104
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
+[main] - APP/webroot/index.php, line 98
+
+2012-01-29 21:52:12 Notice: Notice (8): Undefined index: email in [/var/www/agdeima/Controller/UsersController.php, line 114]
+Trace:
+UsersController::validate_form() - APP/Controller/UsersController.php, line 114
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 473
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 104
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
+[main] - APP/webroot/index.php, line 98
+
+2012-01-29 21:52:22 Notice: Notice (8): Undefined index: email in [/var/www/agdeima/Controller/UsersController.php, line 114]
+Trace:
+UsersController::validate_form() - APP/Controller/UsersController.php, line 114
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 473
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 104
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
+[main] - APP/webroot/index.php, line 98
+
+2012-01-29 22:27:15 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:27:30 Notice: Notice (8): Undefined index: username in [/var/www/agdeima/Controller/UsersController.php, line 114]
+Trace:
+UsersController::validate_form() - APP/Controller/UsersController.php, line 114
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 473
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 104
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
+[main] - APP/webroot/index.php, line 98
+
+2012-01-29 22:39:40 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:40:01 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:40:01 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:41:21 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:41:22 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:41:35 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:41:35 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:42:53 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:42:53 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:46:53 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:46:53 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:46:56 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:46:56 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 50
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:48:51 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 54
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:48:51 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 54
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:48:53 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 54
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:48:54 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 54
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:49:58 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 55
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:49:58 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 55
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:50:01 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 55
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:50:01 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 55
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:50:27 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 55
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:50:27 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 55
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:50:53 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 55
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:50:53 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 55
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:50:57 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 55
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+
+2012-01-29 22:50:57 Notice: Notice (8): Undefined variable: mostViewed in [/var/www/agdeima/View/Elements/sidebar.ctp, line 20]
+Trace:
+include - APP/View/Elements/sidebar.ctp, line 20
+View::_render() - CORE/Cake/View/View.php, line 595
+View::element() - CORE/Cake/View/View.php, line 317
+include - APP/View/Layouts/default.ctp, line 55
+View::_render() - CORE/Cake/View/View.php, line 595
+View::renderLayout() - CORE/Cake/View/View.php, line 411
+View::render() - CORE/Cake/View/View.php, line 373
+Controller::render() - CORE/Cake/Controller/Controller.php, line 900
+ExceptionRenderer::_outputMessage() - CORE/Cake/Error/ExceptionRenderer.php, line 268
+ExceptionRenderer::error400() - CORE/Cake/Error/ExceptionRenderer.php, line 213
+ExceptionRenderer::render() - CORE/Cake/Error/ExceptionRenderer.php, line 165
+ErrorHandler::handleException() - CORE/Cake/Error/ErrorHandler.php, line 127
+[main] - [internal], line ??
+

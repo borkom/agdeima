@@ -6,7 +6,9 @@ App::uses('AppController', 'Controller');
  * @property User $User
  */
 class UsersController extends AppController {
-
+    public $components = array('RequestHandler');
+	public $helpers = array('Js');
+	public $uses = array('User');
 
 /**
  * index method
@@ -93,4 +95,24 @@ class UsersController extends AppController {
 		$this->Session->setFlash(__('User was not deleted'));
 		$this->redirect(array('action' => 'index'));
 	}
+	
+/**
+ * validate_form method
+ *
+ * @return void
+ */
+
+	public function validate_form(){
+		if ($this->request->is('ajax')) {
+			$this->disableCache();
+			//$this->request->data['field'] = $this->request->data['value'];
+			$this->User->set($this->request->data['field'], $this->request->data['value']);
+			if($this->User->validates()){
+				$this->autoRender = false;
+			} else {
+				$error = $this->validateErrors($this->User);
+				$this->set('error', $error[$this->request->data['field']][0]);
+			}
+		}
+	}	
 }

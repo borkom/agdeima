@@ -1,3 +1,4 @@
+<?php $this->set('title_for_layout', ' - Indeks strana'); ?>
 <pre>
 	<?php //print_r($mostViewed);?>
 </pre>	

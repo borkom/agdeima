@@ -26,7 +26,7 @@ class User extends AppModel {
 		'username' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Morate upisati nadimak!',
 				'allowEmpty' => false,
 				'required' => true,
 				//'last' => false, // Stop validation after this rule
@@ -36,7 +36,7 @@ class User extends AppModel {
 		'email' => array(
 			'email' => array(
 				'rule' => array('email'),
-				'message' => 'email adresa nije ispravna',
+				'message' => 'Email adresa nije ispravna!',
 				'allowEmpty' => false,
 				'required' => true,
 				//'last' => false, // Stop validation after this rule

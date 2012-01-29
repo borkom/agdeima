@@ -10,7 +10,7 @@ App::uses('CakeEmail', 'Network/Email');
  */
 class PostsController extends AppController {
     public $components = array('RequestHandler' ,'Picasa', 'Session', 'PermalinkGenerator', 'MathCaptcha', array('timer' => 3));
-	public $helpers = array('Session', 'Time', 'Text');
+	public $helpers = array('Js', 'Session', 'Time', 'Text');
 	public $uses = array('User', 'Post', 'Comment');
 	
 	function beforeRender()
@@ -270,5 +270,25 @@ class PostsController extends AppController {
 			$this->redirect(array('action' => 'index'));
 			}
 		}
-	}	
+	}
+	
+/**
+ * validate_form method
+ *
+ * @return void
+ */
+
+	public function validate_form(){
+		if ($this->request->is('ajax')) {
+			$this->disableCache();
+			//$this->request->data['field'] = $this->request->data['value'];
+			$this->Post->set($this->request->data['field'], $this->request->data['value']);
+			if($this->Post->validates()){
+				$this->autoRender = false;
+			} else {
+				$error = $this->validateErrors($this->Post);
+				$this->set('error', $error[$this->request->data['field']][0]);
+			}
+		}
+	} 		
 }
