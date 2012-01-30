@@ -1,5 +1,5 @@
 <?php $this->set('title_for_layout', ' - Novi post'); ?>
-<?php $this->Html->script(array('ckeditor/ckeditor', 'jquery/jquery-1.6.1.min', 'jquery/fileuploader', 'validation'), array('inline' => false));?>
+<?php $this->Html->script(array('ckeditor/ckeditor', 'jquery/jquery-1.6.1.min', 'validation'), array('inline' => false));?>
 <div class="posts form">
 				
 			<?php echo $this->Form->create('Post', array('type' => 'file'));?>

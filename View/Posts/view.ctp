@@ -1,12 +1,7 @@
 <?php $this->Html->script('http://static.ak.fbcdn.net/connect.php/js/FB.Share', array('inline' => false));?>
 <?php $this->Html->scriptBlock('!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");', array('inline' => false));?>
-<?php $this->set('title_for_layout', ' - '.$post['Post']['title']); ?>
-<pre>
-	<?php //print_r($neighbors);?>
-	<?php //print_r($params);?>
-		<?php //print_r($this->Session->read());?>
-</pre>	
-
+<?php $this->Html->script(array('jquery/jquery-1.6.1.min', 'validation', 'voting'), array('inline' => false));?>
+<?php $this->set('title_for_layout', ' - '.$post['Post']['title']); ?>	
 
 	<h1><?php echo $this->Html->link($post['Post']['title'], array('controller' => 'posts', 'action' => 'view', 'year' => $this->Time->format('Y', $post['Post']['created']), 'month' => $this->Time->format('m', $post['Post']['created']), 'permalink' => $post['Post']['permalink'], 'id' => $post['Post']['id'])); ?></h1>
 				<p class="post-info"><?php echo h($post['Post']['created']); ?> |
@@ -47,11 +42,19 @@
 			
 			</div>			
 			<div class="komentara"><p>Ostavite svoj komentar:</p></div>
-<?php foreach ($comments as $comment):?>		
+<?php foreach ($comments as $comment):?>
+						<?php if($comment['Comment']['up'] - $comment['Comment']['down'] >= 5 ): ?>
+						<div class="komentar-box-high">
+						<div class="komentar-bg-hight"></div>	
+						<?php else: ?>			
 						<div class='komentar-box'>
 						<div class='komentar-bg'><?php echo $this->Html->image('comment.png', array('alt' => 'Comment')); ?></div>
+						<?php endif;?>
 						<p><?php echo $comment['Comment']['content'];?></p>
-
+						<div class="voting">
+						<div class="voting-up"><a href="#" class="voting-up-number" id="<?php echo $comment['Comment']['id'];?>-up"><?php echo $comment['Comment']['up'];?></a></div>
+						<div class="voting-down"><a href="#" class="voting-down-number" id="<?php echo $comment['Comment']['id'];?>-down"><?php echo $comment['Comment']['down'];?></a></div>
+						</div>
 						<div class='komentator'><?php echo $comment['User']['username'];?>
 								<div class='comment-datum'><?php echo $comment['Comment']['created'];?></div>
 							  </div>
@@ -64,10 +67,10 @@
 <div class="new-comment-box">
 <?php echo $this->Form->create('Post');?>
 			<?php if(!$this->Session->check('Login.email')):?>			
-			<?php echo $this->Form->input('User.username', array('label' => false, 'div' => false, 'class' => 'input-box'));?>
+			<?php echo $this->Form->input('User.username', array('id' => 'username', 'label' => false, 'div' => false, 'class' => 'input-box'));?>
 			<span class="label">Nadimak</span><br /><br />
 			
-			<?php echo $this->Form->input('User.email', array('label' => false, 'div' => false, 'class' => 'input-box'));?>
+			<?php echo $this->Form->input('User.email', array('id' => 'email', 'label' => false, 'div' => false, 'class' => 'input-box'));?>
 			<span class="label">Email (neće biti objavljen)</span><br /><br />
 			<?php endif;?>			
 			<?php echo $this->Form->input('Comment.content', array('label' => false, 'div' => false, 'class' => 'comment-input'));?><br /><br />			

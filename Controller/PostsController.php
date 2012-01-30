@@ -102,7 +102,7 @@ class PostsController extends AppController {
 		if (!$this->Post->exists()) {
 			throw new NotFoundException(__('Invalid post'));
 		}
-		$comments = $this->Post->Comment->find('all', array('fields' => array('User.username', 'Comment.content', 'Comment.created'), 'conditions' => array('Post.id' => $id)));
+		$comments = $this->Post->Comment->find('all', array('fields' => array('User.username', 'Comment.id', 'Comment.content', 'Comment.created', 'Comment.up', 'Comment.down'), 'conditions' => array('Post.id' => $id)));
 		$post = $this->Post->read(null, $id);
 		$this->set('post', $post);
 		$this->set('comments', $comments);
