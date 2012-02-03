@@ -76,7 +76,7 @@ class PostsController extends AppController {
 					$email->to('admin@agdeima.com');
 					$email->bcc($this->Post->PostUser->find('list', array('fields' => array('User.id', 'User.email'), 'conditions' => array('PostUser.post_id' => $id, 'PostUser.notify' => true), 'recursive' => 0)));
 					$email->subject('Novi komentar');
-					$email->viewVars(array('id' => $id, 'title' => $this->Post->field('title', array('Post.id' => $id))));
+					$email->viewVars(array('id' => $id, 'title' => $this->Post->field('title', array('Post.id' => $id)), 'permalink' => $this->Post->field('permalink', array('Post.id' => $id)), 'created' => $this->Post->field('created', array('Post.id' => $id))));
 					$email->emailFormat('html');
 					$email->send();*/
 					$postuser = $this->Post->PostUser->find('first', array('conditions' => array('PostUser.post_id' => $id, 'PostUser.user_id' => $user_id)));	
@@ -250,6 +250,32 @@ class PostsController extends AppController {
 	}
 	
 /**
+ * admin_edit method
+ *
+ * @param string $id
+ * @return void
+ */
+	public function admin_edit($id = null) {
+		$this->Post->id = $id;
+		if (!$this->Post->exists()) {
+			throw new NotFoundException(__('Invalid post'));
+		}
+		if ($this->request->is('post') || $this->request->is('put')) {
+			if ($this->Post->save($this->request->data)) {
+				$this->Session->setFlash(__('The post has been saved'));
+				$this->redirect(array('action' => 'index'));
+			} else {
+				$this->Session->setFlash(__('The post could not be saved. Please, try again.'));
+			}
+		} else {
+			$this->request->data = $this->Post->read(null, $id);
+		}
+		$users = $this->Post->User->find('list');
+		$categories = $this->Post->Category->find('list');
+		$this->set(compact('users', 'categories'));
+	}	
+	
+/**
  * unsubscribe method
  *
  * @param string $id
@@ -271,6 +297,19 @@ class PostsController extends AppController {
 			}
 		}
 	}
+	
+/**
+ * search method
+ *
+ * @return void
+ */
+	public function search() {
+					
+		$this->Post->recursive = 1;
+		$this->paginate = array('limit' => 5, 'conditions' => array('Post.published =' => true), 'order' => array('Post.created' => 'desc'));		
+		$data = $this->paginate('Post');
+		$this->set('posts', $data);
+	}	
 	
 /**
  * validate_form method

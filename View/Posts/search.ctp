@@ -1,4 +1,4 @@
-<?php $this->set('title_for_layout', ' - Indeks strana'); ?>
+<?php $this->set('title_for_layout', ' - Rezultati pretrage'); ?>
 	<div class="posts index">
 	<?php
 	foreach ($posts as $post): ?>
@@ -18,7 +18,7 @@
 	<p>
 	<?php
 	echo $this->Paginator->counter(array(
-	'format' => __('Strana {:page} od {:pages}, prikazuje {:current} unosa od ukupno {:count}, počev od unosa {:start} do unosa {:end}.')
+	'format' => __('Strana {:page} od {:pages}, prikazuje {:current} rezultata od ukupno {:count}, počev od rezultata {:start} do rezultata {:end}.')
 	));
 	?>	</p>
 

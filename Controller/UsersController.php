@@ -11,6 +11,30 @@ class UsersController extends AppController {
 	public $uses = array('User');
 
 /**
+ * login method
+ *
+ * @return void
+ */
+	public function login() {
+		if($this->request->is('post')){
+			if($this->Auth->login()){
+				$this->redirect($this->Auth->redirect());
+			} else {
+				$this->Session->setFlash('Netacna kombinacija korisnickog imena i lozinke!');
+			}
+		}
+	}
+	
+/**
+ * logout method
+ *
+ * @return void
+ */
+	public function logout() {
+		$this->redirect($this->Auth->logout());
+	}	
+
+/**
  * index method
  *
  * @return void

@@ -13,7 +13,7 @@
 
 <div id="search">
 
-	<p>Pronađi: <input type=TEXT name="search-input" class="search-input"></p>
+	<p><input type=TEXT name="search-input" class="search-input" value="Pronađi..." onblur="if(this.value=='') this.value='Pronađi...'" onfocus="if(this.value =='Pronađi...' ) this.value=''"></p>
 	
 </div>
 

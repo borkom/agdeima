@@ -18,7 +18,7 @@
   </tr>
   <tr>
     <td height="20" style="font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold;"><br />      
-       Tekst: &quot;<?php echo $this->Html->link($title, array('controller' => 'posts', 'action' => 'view', $id), array('style' => 'color:#000; text-decoration:none')); ?>&quot;</td>
+       Tekst: &quot;<?php echo $this->Html->link($title, array('controller' => 'posts', 'action' => 'view', 'year' => $this->Time->format('Y', $created), 'month' => $this->Time->format('m', $created), 'permalink' => $permalink, 'id' => $id), array('style' => 'color:#000; text-decoration:none')); ?>&quot;</td>
   </tr>
   <tr>
     <td height="214">
@@ -29,7 +29,7 @@
     Označili ste da Vas obavestimo kada se objavi novi komentar posle Vašeg.<br /><br />
     Možete ga pogledati na sledećem linku: <br />
     
-    </font><font face="Trebuchet MS, Arial, Helvetica, sans-serif" color="#333333" style="font-size:14px"><p><?php echo $this->Html->link('LINK', array('controller' => 'posts', 'action' => 'view', $id), array('style' => 'color:#000')); ?><br /><br /><br /><br />
+    </font><font face="Trebuchet MS, Arial, Helvetica, sans-serif" color="#333333" style="font-size:14px"><p><?php echo $this->Html->link('LINK', array('controller' => 'posts', 'action' => 'view', 'year' => $this->Time->format('Y', $created), 'month' => $this->Time->format('m', $created), 'permalink' => $permalink, 'id' => $id), array('style' => 'color:#000')); ?><br /><br /><br /><br />
     
        
     <?php echo $this->Html->link(__('Ne želim više da primam obaveštenja za ovaj tekst'), array('controller' => 'posts', 'action' => 'unsubscribe', $id), array('style' => 'color:#000; font-size:11px')); ?>    

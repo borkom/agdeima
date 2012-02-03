@@ -42,7 +42,7 @@
 );
 
 	Router::connect('/novi-post', array('controller' => 'posts', 'action' => 'add'));
-	
+	Router::connect('/admin', array('controller' => 'posts', 'action' => 'index', 'admin' => true));
 /**
  * ...and connect the rest of 'Pages' controller's urls.
  */

@@ -445,6 +445,22 @@ color:gray;
 text-decoration:none;
 }
 
+#paginacija ul li span.disabled{
+display: block;
+padding: 6px 10px;
+font-size: 16px;
+color:black;
+text-decoration:none;
+}
+
+#paginacija ul li span.current{
+display: block;
+padding: 6px 10px;
+font-size: 16px;
+color:black;
+text-decoration:none;
+}
+
 #paginacija ul li a:hover {
 text-decoration:underline;  
 }
