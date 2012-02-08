@@ -9,6 +9,11 @@ class CommentsController extends AppController {
     public $components = array('RequestHandler');
 	public $helpers = array('Js');
 	
+	public function beforeFilter(){
+		parent::beforeFilter();
+		$this->Auth->allow('vote');
+	}	
+	
 /**
  * vote method
  *
@@ -84,7 +89,8 @@ class CommentsController extends AppController {
  *
  * @return void
  */
-	public function index() {
+	public function admin_index() {
+		$this->layout = 'admin';			
 		$this->Comment->recursive = 0;
 		$this->set('comments', $this->paginate());
 	}
@@ -95,7 +101,8 @@ class CommentsController extends AppController {
  * @param string $id
  * @return void
  */
-	public function view($id = null) {
+	public function admin_view($id = null) {
+		$this->layout = 'admin';			
 		$this->Comment->id = $id;
 		if (!$this->Comment->exists()) {
 			throw new NotFoundException(__('Invalid comment'));
@@ -108,7 +115,8 @@ class CommentsController extends AppController {
  *
  * @return void
  */
-	public function add() {
+	public function admin_add() {
+		$this->layout = 'admin';			
 		if ($this->request->is('post')) {
 			$this->Comment->create();
 			if ($this->Comment->save($this->request->data)) {
@@ -129,24 +137,22 @@ class CommentsController extends AppController {
  * @param string $id
  * @return void
  */
-	public function edit($id = null) {
+	public function admin_edit($id = null, $id_post = null) {
+		$this->layout = 'admin';			
 		$this->Comment->id = $id;
 		if (!$this->Comment->exists()) {
 			throw new NotFoundException(__('Invalid comment'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Comment->save($this->request->data)) {
-				$this->Session->setFlash(__('The comment has been saved'));
-				$this->redirect(array('action' => 'index'));
+				$this->Session->setFlash(__('Komentar izmenjen'));
+				$this->redirect(array('controller' => 'posts', 'action' => 'view', $id_post));
 			} else {
-				$this->Session->setFlash(__('The comment could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('Komentar nije izmenjen, pokusajte ponovo.'));
 			}
 		} else {
 			$this->request->data = $this->Comment->read(null, $id);
 		}
-		$users = $this->Comment->User->find('list');
-		$posts = $this->Comment->Post->find('list');
-		$this->set(compact('users', 'posts'));
 	}
 
 /**
@@ -155,19 +161,40 @@ class CommentsController extends AppController {
  * @param string $id
  * @return void
  */
-	public function delete($id = null) {
+	public function admin_delete($id = null, $id_post = null) {
 		if (!$this->request->is('post')) {
 			throw new MethodNotAllowedException();
 		}
 		$this->Comment->id = $id;
 		if (!$this->Comment->exists()) {
-			throw new NotFoundException(__('Invalid comment'));
+			throw new NotFoundException(__('Nepostojeci komentar'));
 		}
 		if ($this->Comment->delete()) {
-			$this->Session->setFlash(__('Comment deleted'));
-			$this->redirect(array('action' => 'index'));
+			$this->Session->setFlash(__('Komentar izbrisan.'));
+			$this->redirect(array('controller' => 'posts', 'action' => 'view', $id_post));
 		}
-		$this->Session->setFlash(__('Comment was not deleted'));
-		$this->redirect(array('action' => 'index'));
+		$this->Session->setFlash(__('Komentar nije izbrisan'));
+		$this->redirect(array('controller' => 'posts', 'action' => 'view', $id_post));
 	}
+	
+/**
+ * admin_publish method
+ *
+ * @param string $id
+ * @return void
+ */
+	public function admin_publish($id = null, $id_post = null) {
+		$this->layout = 'admin';			
+		$this->Comment->id = $id;
+		if (!$this->Comment->exists()) {
+			throw new NotFoundException(__('Nepostojeci komentar'));
+		} else {
+			$this->Comment->set('published', true);
+			if($this->Comment->save()){
+				$this->Session->setFlash(__('Komentar objavljen'));
+				$this->redirect(array('controller' => 'posts', 'action' => 'view', $id_post));
+			}
+			
+		}
+	}	
 }

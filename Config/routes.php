@@ -41,6 +41,15 @@
     )
 );
 
+	Router::connect(
+    '/kategorija/:permalink-:id',
+    array('controller' => 'posts', 'action' => 'categorized'),
+    array(
+        'pass' => array('permalink', 'id'),
+        'id' => '[0-9]+'
+    )
+);
+
 	Router::connect('/novi-post', array('controller' => 'posts', 'action' => 'add'));
 	Router::connect('/admin', array('controller' => 'posts', 'action' => 'index', 'admin' => true));
 /**

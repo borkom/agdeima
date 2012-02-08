@@ -6,30 +6,16 @@ App::uses('AppController', 'Controller');
  * @property Category $Category
  */
 class CategoriesController extends AppController {
-
-
+		
 /**
- * index method
+ * admin_index method
  *
  * @return void
  */
-	public function index() {
+	public function admin_index() {
+		$this->layout = 'admin';			
 		$this->Category->recursive = 0;
 		$this->set('categories', $this->paginate());
-	}
-
-/**
- * view method
- *
- * @param string $id
- * @return void
- */
-	public function view($id = null) {
-		$this->Category->id = $id;
-		if (!$this->Category->exists()) {
-			throw new NotFoundException(__('Invalid category'));
-		}
-		$this->set('category', $this->Category->read(null, $id));
 	}
 
 /**
@@ -37,14 +23,15 @@ class CategoriesController extends AppController {
  *
  * @return void
  */
-	public function add() {
+	public function admin_add() {
+		$this->layout = 'admin';			
 		if ($this->request->is('post')) {
 			$this->Category->create();
 			if ($this->Category->save($this->request->data)) {
-				$this->Session->setFlash(__('The category has been saved'));
+				$this->Session->setFlash(__('Nova kategorija je uneta'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The category could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('Kategorija nije unesena.'));
 			}
 		}
 	}
@@ -55,17 +42,18 @@ class CategoriesController extends AppController {
  * @param string $id
  * @return void
  */
-	public function edit($id = null) {
+	public function admin_edit($id = null) {
+		$this->layout = 'admin';			
 		$this->Category->id = $id;
 		if (!$this->Category->exists()) {
-			throw new NotFoundException(__('Invalid category'));
+			throw new NotFoundException(__('Nepostojeca kategorija'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Category->save($this->request->data)) {
-				$this->Session->setFlash(__('The category has been saved'));
+				$this->Session->setFlash(__('Kategorija je izmenjena'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The category could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('Kategorija nije izmenjena, pokusajte ponovo.'));
 			}
 		} else {
 			$this->request->data = $this->Category->read(null, $id);
@@ -78,19 +66,19 @@ class CategoriesController extends AppController {
  * @param string $id
  * @return void
  */
-	public function delete($id = null) {
+	public function admin_delete($id = null) {
 		if (!$this->request->is('post')) {
 			throw new MethodNotAllowedException();
 		}
 		$this->Category->id = $id;
 		if (!$this->Category->exists()) {
-			throw new NotFoundException(__('Invalid category'));
+			throw new NotFoundException(__('Nepostojeca kategorija'));
 		}
 		if ($this->Category->delete()) {
-			$this->Session->setFlash(__('Category deleted'));
+			$this->Session->setFlash(__('Kategorija je obrisana'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Category was not deleted'));
+		$this->Session->setFlash(__('Kategorija nije obrisana'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

@@ -9,13 +9,19 @@ class UsersController extends AppController {
     public $components = array('RequestHandler');
 	public $helpers = array('Js');
 	public $uses = array('User');
+	
+	public function beforeFilter(){
+		parent::beforeFilter();
+		$this->Auth->allow('validate_form');
+	}	
 
 /**
- * login method
+ * admin_login method
  *
  * @return void
  */
-	public function login() {
+	public function admin_login() {
+		$this->layout = 'admin';			
 		if($this->request->is('post')){
 			if($this->Auth->login()){
 				$this->redirect($this->Auth->redirect());
@@ -26,31 +32,33 @@ class UsersController extends AppController {
 	}
 	
 /**
- * logout method
+ * admin_logout method
  *
  * @return void
  */
-	public function logout() {
+	public function admin_logout() {
 		$this->redirect($this->Auth->logout());
 	}	
 
 /**
- * index method
+ * admin_index method
  *
  * @return void
  */
-	public function index() {
+	public function admin_index() {
+		$this->layout = 'admin';			
 		$this->User->recursive = 0;
 		$this->set('users', $this->paginate());
 	}
 
 /**
- * view method
+ * admin_view method
  *
  * @param string $id
  * @return void
  */
-	public function view($id = null) {
+	public function admin_view($id = null) {
+		$this->layout = 'admin';			
 		$this->User->id = $id;
 		if (!$this->User->exists()) {
 			throw new NotFoundException(__('Invalid user'));
@@ -59,11 +67,12 @@ class UsersController extends AppController {
 	}
 
 /**
- * add method
+ * admin_add method
  *
  * @return void
  */
-	public function add() {
+	public function admin_add() {
+		$this->layout = 'admin';			
 		if ($this->request->is('post')) {
 			$this->User->create();
 			if ($this->User->save($this->request->data)) {
@@ -76,12 +85,13 @@ class UsersController extends AppController {
 	}
 
 /**
- * edit method
+ * admin_edit method
  *
  * @param string $id
  * @return void
  */
-	public function edit($id = null) {
+	public function admin_edit($id = null) {
+		$this->layout = 'admin';			
 		$this->User->id = $id;
 		if (!$this->User->exists()) {
 			throw new NotFoundException(__('Invalid user'));
@@ -99,12 +109,12 @@ class UsersController extends AppController {
 	}
 
 /**
- * delete method
+ * admin_delete method
  *
  * @param string $id
  * @return void
  */
-	public function delete($id = null) {
+	public function admin_delete($id = null) {
 		if (!$this->request->is('post')) {
 			throw new MethodNotAllowedException();
 		}

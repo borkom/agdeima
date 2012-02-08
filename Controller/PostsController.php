@@ -9,9 +9,15 @@ App::uses('CakeEmail', 'Network/Email');
  * @property Post $Post
  */
 class PostsController extends AppController {
-    public $components = array('RequestHandler' ,'Picasa', 'Session', 'PermalinkGenerator', 'MathCaptcha', array('timer' => 3));
+    public $components = array('RequestHandler' ,'Picasa', 'PermalinkGenerator', 'MathCaptcha', array('timer' => 3));
 	public $helpers = array('Js', 'Session', 'Time', 'Text');
-	public $uses = array('User', 'Post', 'Comment');
+	public $uses = array('User', 'Post', 'Comment', 'Category');
+	
+	
+	public function beforeFilter(){
+		parent::beforeFilter();
+		$this->Auth->allow('index', 'view', 'add', 'unsubscribe', 'search', 'validate_form', 'categorized');
+	}
 	
 	function beforeRender()
 	{
@@ -36,6 +42,20 @@ class PostsController extends AppController {
 		$data = $this->paginate('Post');
 		$this->set('posts', $data);
 	}
+	
+/**
+ * categorized method
+ *
+ * @param string $id
+ * @return void
+ */
+	public function categorized($permalink = null, $id = null) {
+					
+		$this->Post->recursive = 1;
+		$this->paginate = array('limit' => 5, 'conditions' => array('Post.published =' => true, 'Post.category_id' => $id), 'order' => array('Post.created' => 'desc'));		
+		$data = $this->paginate('Post');
+		$this->set('posts', $data);
+	}	
 
 /**
  * view method
@@ -202,38 +222,12 @@ class PostsController extends AppController {
 	}
 
 /**
- * edit method
+ * admin_delete method
  *
  * @param string $id
  * @return void
  */
-	public function edit($id = null) {
-		$this->Post->id = $id;
-		if (!$this->Post->exists()) {
-			throw new NotFoundException(__('Invalid post'));
-		}
-		if ($this->request->is('post') || $this->request->is('put')) {
-			if ($this->Post->save($this->request->data)) {
-				$this->Session->setFlash(__('The post has been saved'));
-				$this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The post could not be saved. Please, try again.'));
-			}
-		} else {
-			$this->request->data = $this->Post->read(null, $id);
-		}
-		$users = $this->Post->User->find('list');
-		$categories = $this->Post->Category->find('list');
-		$this->set(compact('users', 'categories'));
-	}
-
-/**
- * delete method
- *
- * @param string $id
- * @return void
- */
-	public function delete($id = null) {
+	public function admin_delete($id = null) {
 		if (!$this->request->is('post')) {
 			throw new MethodNotAllowedException();
 		}
@@ -250,30 +244,98 @@ class PostsController extends AppController {
 	}
 	
 /**
+ * admin_index method
+ *
+ * @return void
+ */
+	public function admin_index() {
+		$this->layout = 'admin';					
+		$this->Post->recursive = 1;
+		$this->paginate = array('limit' => 10, 'order' => array('Post.created' => 'desc'));		
+		$data = $this->paginate('Post');
+		$this->set('posts', $data);
+	}
+	
+/**
+ * admin_categorized method
+ *
+ * @param string $id
+ * @return void
+ */
+	public function admin_categorized($id = null) {
+		$this->layout = 'admin';					
+		$this->Post->recursive = 1;
+		$this->paginate = array('limit' => 10, 'conditions' => array('Post.category_id' => $id), 'order' => array('Post.created' => 'desc'));		
+		$data = $this->paginate('Post');
+		$this->set('posts', $data);
+	}	
+	
+/**
+ * admin_view method
+ *
+ * @param string $id
+ * @return void
+ */
+	public function admin_view($id = null) {
+		$this->layout = 'admin';	
+		$this->Post->id = $id;
+		if (!$this->Post->exists()) {
+			throw new NotFoundException(__('Invalid post'));
+		}
+		$comments = $this->Post->Comment->find('all', array('fields' => array('User.username', 'Comment.id', 'Comment.content', 'Comment.created', 'Comment.up', 'Comment.down'), 'conditions' => array('Post.id' => $id)));
+		$post = $this->Post->read(null, $id);
+		$this->set('post', $post);
+		$this->set('comments', $comments);
+		$this->set('neighbors', $this->Post->find('neighbors', array('field' => 'id', 'value' => $id)));
+	}		
+	
+/**
  * admin_edit method
  *
  * @param string $id
  * @return void
  */
 	public function admin_edit($id = null) {
+		$this->layout = 'admin';			
 		$this->Post->id = $id;
 		if (!$this->Post->exists()) {
 			throw new NotFoundException(__('Invalid post'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Post->save($this->request->data)) {
-				$this->Session->setFlash(__('The post has been saved'));
-				$this->redirect(array('action' => 'index'));
+				$this->Session->setFlash(__('Post je izmenjen'));
+				$this->redirect(array('controller' => 'posts', 'action' => 'view', $id));
 			} else {
-				$this->Session->setFlash(__('The post could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('Post nije izmenjen, pokusajte ponovo.'));
 			}
 		} else {
 			$this->request->data = $this->Post->read(null, $id);
 		}
-		$users = $this->Post->User->find('list');
+		//$users = $this->Post->User->find('list');
 		$categories = $this->Post->Category->find('list');
-		$this->set(compact('users', 'categories'));
-	}	
+		$this->set(compact('categories'));
+	}
+	
+/**
+ * admin_publish method
+ *
+ * @param string $id
+ * @return void
+ */
+	public function admin_publish($id = null) {
+		$this->layout = 'admin';			
+		$this->Post->id = $id;
+		if (!$this->Post->exists()) {
+			throw new NotFoundException(__('Invalid post'));
+		} else {
+			$this->Post->set('published', true);
+			if($this->Post->save()){
+				$this->Session->setFlash(__('Post objavljen'));
+				$this->redirect(array('controller' => 'posts', 'action' => 'view', $id));
+			}
+			
+		}
+	}		
 	
 /**
  * unsubscribe method

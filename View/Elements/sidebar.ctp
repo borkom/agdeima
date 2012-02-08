@@ -30,8 +30,8 @@ echo $this->Html->image('kat.png', array('alt' => 'Kat')); ?><h1>Kategorije</h1>
 
 	<ul>
 		<li><a href="#">Jedan lep naslov (24)</a></li>
-		<li><a href="#">Nije koža janike balaža uvek crvena (30)</a></li>
-		<li><a href="#">Nije koža janike balaža uvek crvena (13)</a></li>
+		<li><a href="#">Drugi naslov (30)</a></li>
+		<li><a href="#">Treci naslov (13)</a></li>
 		<li><a href="#">Jedan lep naslov (69)</a></li>
 	</ul>
 </div>

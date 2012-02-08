@@ -34,9 +34,9 @@ class AppController extends Controller {
 	public $components = array(
 		'Session',
 		'Auth' => array(
-			'loginRedirect' => array('controller' => 'users', 'action' => 'index'),
-			'logoutRedirect' => array('controller' => 'users', 'action' => 'index'),		
-			'authError' => "You can't access that page",
+			'loginRedirect' => array('controller' => 'posts', 'action' => 'index', 'admin' => true),
+			'logoutRedirect' => array('controller' => 'posts', 'action' => 'index', 'admin' => false),		
+			'authError' => "Nemate pristup ovoj stranici!",
 			'authorize' => array('Controller')
 		)
 	);
@@ -46,6 +46,6 @@ class AppController extends Controller {
 	}
 	
 	public function beforeFilter(){
-		$this->Auth->allow('index', 'view');
+		//$this->Auth->allow('index', 'view');
 	}
 }
