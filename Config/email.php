@@ -56,7 +56,7 @@ class EmailConfig {
 		'port' => 465,
 		'timeout' => 30,
 		'username' => 'borko.mihajlovic@gmail.com',
-		'password' => '****',
+		'password' => '',
 		'client' => null,
 		'log' => false
 		//'charset' => 'utf-8',

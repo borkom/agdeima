@@ -4,10 +4,11 @@
 echo $this->Html->image('stats.png', array('alt' => 'Stats')); ?><h1>Statistika</h1>
 
 	<ul>
-		<li><a href="#">Objavljenih tekstova: 7</a></li>
-		<li><a href="#">Pozitivnih komentara: 40</a></li>
-		<li><a href="#">Negativnih komentara: 9</a></li>
-		<li><a href="#">Član ste: 7 god. 3 meseca</a></li>
+		<li>Korisničko ime: <?php echo $userstats['info']['User']['username'];?></li>		
+		<li>Objavljenih tekstova: <?php echo $userstats['postscount'];?></li>
+		<li>Pozitivnih komentara: <?php echo $userstats['votes'][0][0]['votes_up'];?></li>
+		<li>Negativnih komentara: <?php echo $userstats['votes'][0][0]['votes_down'];?></li>
+		<li>Član ste: <?php echo $this->Time->timeAgoInWords($userstats['info']['User']['created'], array('format' => 'F jS, Y', 'end' => '+1 year'));?></li>
 	</ul>
 	
 </div>
@@ -29,10 +30,9 @@ echo $this->Html->image('hot.png', array('alt' => 'Hot')); ?><h1>Popularni naslo
 echo $this->Html->image('kat.png', array('alt' => 'Kat')); ?><h1>Kategorije</h1>
 
 	<ul>
-		<li><a href="#">Jedan lep naslov (24)</a></li>
-		<li><a href="#">Drugi naslov (30)</a></li>
-		<li><a href="#">Treci naslov (13)</a></li>
-		<li><a href="#">Jedan lep naslov (69)</a></li>
+		<?php foreach($popularcat as $cat): ?>
+		<li><?php echo $this->Html->link($cat['Category']['name'].' ('.$cat[0]['count'].')', array('controller' => 'posts', 'action' => 'categorized', 'permalink' => $cat['Category']['permalink'], 'id' => $cat['Category']['id'])); ?></li>
+		<?php endforeach; ?>
 	</ul>
 </div>
 

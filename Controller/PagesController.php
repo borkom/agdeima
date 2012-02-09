@@ -1,31 +1,4 @@
 <?php
-/**
- * Static content controller.
- *
- * This file will render views from views/pages/
- *
- * PHP 5
- *
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @package       app.Controller
- * @since         CakePHP(tm) v 0.2.9
- * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
- */
-
-/**
- * Static content controller
- *
- * Override this controller by placing a copy in controllers directory of an application
- *
- * @package       app.Controller
- */
 class PagesController extends AppController {
 
 /**
@@ -34,7 +7,17 @@ class PagesController extends AppController {
  * @var string
  */
 	public $name = 'Pages';
-
+	
+	public function beforeFilter(){
+		parent::beforeFilter();
+		$this->Auth->allow('view');
+	}
+	
+	function beforeRender()
+	{
+		parent::beforeRender();
+	}
+	
 /**
  * Default helper
  *
@@ -42,37 +25,114 @@ class PagesController extends AppController {
  */
 	public $helpers = array('Html');
 
-/**
- * This controller does not use a model
- *
- * @var array
- */
-	public $uses = array();
+
+	public $uses = array('Page');
 
 /**
- * Displays a view
+ * view method
  *
- * @param mixed What page to display
+ * @return void
  */
-	public function display() {
-		$path = func_get_args();
-
-		$count = count($path);
-		if (!$count) {
-			$this->redirect('/');
+	public function view($permalink = null, $id = null) {			
+		$this->Page->id = $id;
+		if (!$this->Page->exists()) {
+			throw new NotFoundException(__('Invalid page'));
+		} else {
+			$this->set('page', $this->Page->findById($id));
 		}
-		$page = $subpage = $title_for_layout = null;
-
-		if (!empty($path[0])) {
-			$page = $path[0];
-		}
-		if (!empty($path[1])) {
-			$subpage = $path[1];
-		}
-		if (!empty($path[$count - 1])) {
-			$title_for_layout = Inflector::humanize($path[$count - 1]);
-		}
-		$this->set(compact('page', 'subpage', 'title_for_layout'));
-		$this->render(implode('/', $path));
 	}
-}
+	
+/**
+ * admin_view method
+ *
+ * @return void
+ */
+	public function admin_view($id = null) {
+		$this->layout = 'admin';			
+		if ($this->request->is('post')) {
+			$this->Page->create();
+			if ($this->Page->save($this->request->data)) {
+				$this->Session->setFlash(__('Nova strana je uneta'));
+				$this->redirect(array('action' => 'index'));
+			} else {
+				$this->Session->setFlash(__('Strana nije unesena.'));
+			}
+		}
+	}	
+
+/**
+ * admin_index method
+ *
+ * @return void
+ */
+	public function admin_index() {
+		$this->layout = 'admin';			
+		$this->Page->recursive = 0;
+		$this->set('pages', $this->paginate());
+	}
+
+/**
+ * add method
+ *
+ * @return void
+ */
+	public function admin_add() {
+		$this->layout = 'admin';			
+		if ($this->request->is('post')) {
+			$this->Page->create();
+			if ($this->Page->save($this->request->data)) {
+				$this->Session->setFlash(__('Nova strana je uneta'));
+				$this->redirect(array('action' => 'index'));
+			} else {
+				$this->Session->setFlash(__('Strana nije unesena.'));
+			}
+		}
+	}
+
+/**
+ * edit method
+ *
+ * @param string $id
+ * @return void
+ */
+	public function admin_edit($id = null) {
+		$this->layout = 'admin';			
+		$this->Page->id = $id;
+		if (!$this->Category->exists()) {
+			throw new NotFoundException(__('Nepostojeca stranaa'));
+		}
+		if ($this->request->is('post') || $this->request->is('put')) {
+			if ($this->Page->save($this->request->data)) {
+				$this->Session->setFlash(__('Strana je izmenjena'));
+				$this->redirect(array('action' => 'index'));
+			} else {
+				$this->Session->setFlash(__('Strana nije izmenjena, pokusajte ponovo.'));
+			}
+		} else {
+			$this->request->data = $this->Page->read(null, $id);
+		}
+	}
+
+/**
+ * delete method
+ *
+ * @param string $id
+ * @return void
+ */
+	public function admin_delete($id = null) {
+		if (!$this->request->is('post')) {
+			throw new MethodNotAllowedException();
+		}
+		$this->Page->id = $id;
+		if (!$this->Page->exists()) {
+			throw new NotFoundException(__('Nepostojeca strana'));
+		}
+		if ($this->Page->delete()) {
+			$this->Session->setFlash(__('Strana je obrisana'));
+			$this->redirect(array('action' => 'index'));
+		}
+		$this->Session->setFlash(__('Strana nije obrisana'));
+		$this->redirect(array('action' => 'index'));
+	}
+}	
+?>

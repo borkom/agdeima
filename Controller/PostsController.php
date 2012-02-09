@@ -10,7 +10,7 @@ App::uses('CakeEmail', 'Network/Email');
  */
 class PostsController extends AppController {
     public $components = array('RequestHandler' ,'Picasa', 'PermalinkGenerator', 'MathCaptcha', array('timer' => 3));
-	public $helpers = array('Js', 'Session', 'Time', 'Text');
+	public $helpers = array('Js', 'Session', 'Time', 'Text', 'SearchHighlight');
 	public $uses = array('User', 'Post', 'Comment', 'Category');
 	
 	
@@ -21,10 +21,8 @@ class PostsController extends AppController {
 	
 	function beforeRender()
 	{
-		$this->Post->recursive = 0;
-		$mostViewed = $this->Post->find('all', array('conditions' => array('Post.published =' => true), 'fields' => array('Post.id', 'Post.title', 'Post.permalink', 'Post.created'), 'limit' => 4, 'order' => 'Post.view_count DESC'));
-		$this->set('mostViewed', $mostViewed);
-	}
+		parent::beforeRender();
+	} 
 	
 /**
  * index method
@@ -108,7 +106,7 @@ class PostsController extends AppController {
 					$this->Post->PostUser->save();
 					}	
 					$this->Session->setFlash(__('Komentar je objavljen'));
-					$this->redirect(array('action' => 'view', $id));
+					$this->redirect(array('action' => 'view', 'year' => $year, 'month' => $month, 'permalink' => $permalink, 'id' => $id));
 					//unset($this->request->data);					
 				} else {
 					$this->Session->setFlash(__('Greska prilikom slanja komentara'));					
@@ -366,11 +364,22 @@ class PostsController extends AppController {
  * @return void
  */
 	public function search() {
-					
-		$this->Post->recursive = 1;
-		$this->paginate = array('limit' => 5, 'conditions' => array('Post.published =' => true), 'order' => array('Post.created' => 'desc'));		
-		$data = $this->paginate('Post');
-		$this->set('posts', $data);
+                		
+		if($this->request->is('post')){
+			$this->Session->write('Searched.keyword', $this->request->data['keyword']);				
+			$this->Post->recursive = 1;
+			$this->paginate = array('limit' => 20, 'conditions' => array('Post.published =' => true, 'Post.content LIKE' => '%'.$this->request->data['keyword'].'%'), 'order' => array('Post.created' => 'desc'));		
+			$data = $this->paginate('Post');
+			$this->set('posts', $data);
+			$this->set('search', $this->request->data['keyword']);			
+		} else {
+			$this->Post->recursive = 1;
+			$this->paginate = array('limit' => 20, 'conditions' => array('Post.published =' => true, 'Post.content LIKE' => '%'.$this->Session->read('Searched.keyword').'%'), 'order' => array('Post.created' => 'desc'));		
+			$data = $this->paginate('Post');
+			$this->set('posts', $data);
+			$this->set('search', $this->Session->read('Searched.keyword'));
+		}
+		
 	}	
 	
 /**

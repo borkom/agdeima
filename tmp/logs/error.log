@@ -9562,3 +9562,209 @@ Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 86
 #3 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
 #4 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2012-02-08 23:15:01 Error: [MissingActionException] Action PostsController::favicon.ico() could not be found.
+#0 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-02-08 23:15:01 Error: [MissingActionException] Action PostsController::favicon.ico() could not be found.
+#0 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-02-08 23:15:01 Error: [MissingActionException] Action PostsController::favicon.ico() could not be found.
+#0 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-02-08 23:51:50 Error: [MissingActionException] Action UsersController::admin_newsletter() could not be found.
+#0 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-02-09 00:41:32 Error: [MissingControllerException] Controller class SearchController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-02-09 01:11:35 Error: [MissingComponentException] Component class TimeComponent could not be found.
+#0 /var/www/cakephp/lib/Cake/Controller/ComponentCollection.php(51): ComponentCollection->load('Time', Array)
+#1 /var/www/cakephp/lib/Cake/Controller/Controller.php(585): ComponentCollection->init(Object(UsersController))
+#2 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(100): Controller->constructClasses()
+#3 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-02-09 11:33:29 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SUM(ABS(p.category_id)) 
+ FROM categories c,posts p
+ WHERE p.category_id=c.id
+ G' at line 1
+#0 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(436): PDOStatement->execute(Array)
+#1 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute(' SELECT c.name,...', Array)
+#2 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(647): DboSource->execute(' SELECT c.name,...', Array, Array)
+#3 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(515): DboSource->fetchAll(' SELECT c.name,...')
+#4 [internal function]: DboSource->query(' SELECT c.name,...')
+#5 /var/www/cakephp/lib/Cake/Model/Model.php(2875): call_user_func_array(Array, Array)
+#6 /var/www/agdeima/Controller/AppController.php(66): Model->query(' SELECT c.name,...')
+#7 /var/www/agdeima/Controller/PostsController.php(24): AppController->beforeRender()
+#8 /var/www/cakephp/lib/Cake/Controller/Controller.php(865): PostsController->beforeRender()
+#9 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(111): Controller->render()
+#10 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-02-09 11:34:13 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SUM(ABS(p.category_id)) 
+ FROM categories c,posts p
+ WHERE p.category_id=c.id
+ G' at line 1
+#0 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(436): PDOStatement->execute(Array)
+#1 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute(' SELECT c.name,...', Array)
+#2 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(647): DboSource->execute(' SELECT c.name,...', Array, Array)
+#3 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(515): DboSource->fetchAll(' SELECT c.name,...')
+#4 [internal function]: DboSource->query(' SELECT c.name,...')
+#5 /var/www/cakephp/lib/Cake/Model/Model.php(2875): call_user_func_array(Array, Array)
+#6 /var/www/agdeima/Controller/AppController.php(66): Model->query(' SELECT c.name,...')
+#7 /var/www/agdeima/Controller/PostsController.php(24): AppController->beforeRender()
+#8 /var/www/cakephp/lib/Cake/Controller/Controller.php(865): PostsController->beforeRender()
+#9 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(111): Controller->render()
+#10 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-02-09 11:34:32 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SUM(ABS(p.category_id)) 
+ FROM categories c,posts p
+ WHERE p.category_id=c.id
+ G' at line 1
+#0 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(436): PDOStatement->execute(Array)
+#1 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute(' SELECT c.name ...', Array)
+#2 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(647): DboSource->execute(' SELECT c.name ...', Array, Array)
+#3 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(515): DboSource->fetchAll(' SELECT c.name ...')
+#4 [internal function]: DboSource->query(' SELECT c.name ...')
+#5 /var/www/cakephp/lib/Cake/Model/Model.php(2875): call_user_func_array(Array, Array)
+#6 /var/www/agdeima/Controller/AppController.php(66): Model->query(' SELECT c.name ...')
+#7 /var/www/agdeima/Controller/PostsController.php(24): AppController->beforeRender()
+#8 /var/www/cakephp/lib/Cake/Controller/Controller.php(865): PostsController->beforeRender()
+#9 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(111): Controller->render()
+#10 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-02-09 11:35:07 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SUM(ABS(p.category_id)) 
+ FROM categories c,posts p
+ WHERE p.category_id=c.id
+ G' at line 1
+#0 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(436): PDOStatement->execute(Array)
+#1 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute(' SELECT c.name ...', Array)
+#2 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(647): DboSource->execute(' SELECT c.name ...', Array, Array)
+#3 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(515): DboSource->fetchAll(' SELECT c.name ...')
+#4 [internal function]: DboSource->query(' SELECT c.name ...')
+#5 /var/www/cakephp/lib/Cake/Model/Model.php(2875): call_user_func_array(Array, Array)
+#6 /var/www/agdeima/Controller/AppController.php(66): Model->query(' SELECT c.name ...')
+#7 /var/www/agdeima/Controller/PostsController.php(24): AppController->beforeRender()
+#8 /var/www/cakephp/lib/Cake/Controller/Controller.php(865): PostsController->beforeRender()
+#9 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(111): Controller->render()
+#10 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-02-09 11:35:09 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SUM(ABS(p.category_id)) 
+ FROM categories c,posts p
+ WHERE p.category_id=c.id
+ G' at line 1
+#0 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(436): PDOStatement->execute(Array)
+#1 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute(' SELECT c.name ...', Array)
+#2 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(647): DboSource->execute(' SELECT c.name ...', Array, Array)
+#3 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(515): DboSource->fetchAll(' SELECT c.name ...')
+#4 [internal function]: DboSource->query(' SELECT c.name ...')
+#5 /var/www/cakephp/lib/Cake/Model/Model.php(2875): call_user_func_array(Array, Array)
+#6 /var/www/agdeima/Controller/AppController.php(66): Model->query(' SELECT c.name ...')
+#7 /var/www/agdeima/Controller/PostsController.php(24): AppController->beforeRender()
+#8 /var/www/cakephp/lib/Cake/Controller/Controller.php(865): PostsController->beforeRender()
+#9 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(111): Controller->render()
+#10 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-02-09 12:09:16 Error: [NotFoundException] Invalid post
+#0 [internal function]: PostsController->view('168')
+#1 /var/www/cakephp/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#2 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-02-09 12:09:17 Error: [NotFoundException] Invalid post
+#0 [internal function]: PostsController->view('favicon.ico')
+#1 /var/www/cakephp/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#2 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-02-09 12:09:17 Error: [NotFoundException] Invalid post
+#0 [internal function]: PostsController->view('favicon.ico')
+#1 /var/www/cakephp/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#2 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-02-09 12:09:17 Error: [NotFoundException] Invalid post
+#0 [internal function]: PostsController->view('favicon.ico')
+#1 /var/www/cakephp/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#2 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-02-09 12:48:30 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 4
+#0 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(436): PDOStatement->execute(Array)
+#1 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute(' SELECT SUM(Com...', Array)
+#2 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(647): DboSource->execute(' SELECT SUM(Com...', Array, Array)
+#3 /var/www/cakephp/lib/Cake/Model/Datasource/DboSource.php(515): DboSource->fetchAll(' SELECT SUM(Com...')
+#4 [internal function]: DboSource->query(' SELECT SUM(Com...')
+#5 /var/www/cakephp/lib/Cake/Model/Model.php(2875): call_user_func_array(Array, Array)
+#6 /var/www/agdeima/Controller/AppController.php(80): Model->query(' SELECT SUM(Com...')
+#7 /var/www/agdeima/Controller/PostsController.php(24): AppController->beforeRender()
+#8 /var/www/cakephp/lib/Cake/Controller/Controller.php(865): PostsController->beforeRender()
+#9 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(111): Controller->render()
+#10 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-02-09 14:14:59 Error: [MissingActionException] Action PagesController::admin_favicon.ico() could not be found.
+#0 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-02-09 14:14:59 Error: [MissingActionException] Action PagesController::admin_favicon.ico() could not be found.
+#0 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-02-09 14:14:59 Error: [MissingActionException] Action PagesController::admin_favicon.ico() could not be found.
+#0 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-02-09 14:23:09 Error: [MissingControllerException] Controller class PageController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-02-09 14:23:09 Error: [MissingControllerException] Controller class StranaController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-02-09 14:23:10 Error: [MissingControllerException] Controller class StranaController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-02-09 14:23:10 Error: [MissingControllerException] Controller class StranaController could not be found.
+#0 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-02-09 14:24:43 Error: [NotFoundException] Invalid page
+#0 [internal function]: PagesController->view('o-servisu', '1')
+#1 /var/www/cakephp/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#2 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-02-09 16:50:16 Error: [MissingActionException] Action UsersController::admin_favicon.ico() could not be found.
+#0 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-02-09 16:50:17 Error: [MissingActionException] Action UsersController::admin_favicon.ico() could not be found.
+#0 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-02-09 16:50:17 Error: [MissingActionException] Action UsersController::admin_favicon.ico() could not be found.
+#0 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/cakephp/lib/Cake/Routing/Dispatcher.php(86): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/agdeima/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

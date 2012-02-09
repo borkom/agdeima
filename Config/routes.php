@@ -50,12 +50,19 @@
     )
 );
 
+	Router::connect(
+    '/strana/:permalink-:id',
+    array('controller' => 'pages', 'action' => 'view'),
+    array(
+        'pass' => array('permalink', 'id'),
+        'id' => '[0-9]+'
+    )
+);
+
 	Router::connect('/novi-post', array('controller' => 'posts', 'action' => 'add'));
+	Router::connect('/pretraga', array('controller' => 'posts', 'action' => 'search'));
+	Router::connect('/kontakt', array('controller' => 'users', 'action' => 'contact'));			
 	Router::connect('/admin', array('controller' => 'posts', 'action' => 'index', 'admin' => true));
-/**
- * ...and connect the rest of 'Pages' controller's urls.
- */
-	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 
 /**
  * Load all plugin routes.  See the CakePlugin documentation on

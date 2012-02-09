@@ -44,6 +44,7 @@
 			<?php echo $this->Form->input('PostUser.notify', array('label' => false, 'div' => false, 'class' => 'post-input-box'));?>			
 			<p class="post-label">Izračunaj: <?php echo $captcha; ?></p>			
 			<?php echo $this->Form->input('captcha', array('label' => false, 'div' => false, 'class' => 'post-input-box')); ?><br /><br />
+			<p class="post-label">Slika: </p>
 			<?php echo $this->Form->file('Upload.file', array('label' => false, 'div' => false)); ?>
 			<?php echo $this->Form->button('Submit', array('type' => 'submit', 'div' => false, 'class' => 'post-button-objavi')); ?>
 			<?php echo $this->Form->end();?>
