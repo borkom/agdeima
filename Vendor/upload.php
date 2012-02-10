@@ -6,7 +6,7 @@ Zend_Loader::loadClass('Zend_Gdata_AuthSub');
 
 $serviceName = Zend_Gdata_Photos::AUTH_SERVICE_NAME;
 $user = "gojnik@gmail.com";
-$pass = "Yv4yT7bI";
+$pass = "******";
 
 $client = Zend_Gdata_ClientLogin::getHttpClient($user, $pass, $serviceName);
 
